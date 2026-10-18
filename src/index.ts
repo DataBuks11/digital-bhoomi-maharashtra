@@ -18,6 +18,19 @@ const allowedOriginsEnv = (process.env.ALLOWED_ORIGINS ?? "")
   .map((o) => o.trim())
   .filter(Boolean);
 
+const isAllowedDomain = (hostname: string) => {
+  return (
+    hostname === "localhost" ||
+    hostname === "127.0.0.1" ||
+    hostname.endsWith(".vercel.app") ||
+    hostname === "chatgpt.com" ||
+    hostname.endsWith(".chatgpt.com") ||
+    hostname.endsWith(".openai.com") ||
+    hostname === "claude.ai" ||
+    hostname.endsWith(".claude.ai")
+  );
+};
+
 app.use(
   cors({
     origin: (origin, callback) => {
@@ -34,23 +47,20 @@ app.use(
         return callback(null, true);
       }
 
-      // Allow verified Vercel production and preview domains (*.vercel.app)
+      // Allow verified Vercel, ChatGPT, and Claude domains
       try {
         const parsed = new URL(origin);
-        if (
-          parsed.protocol === "https:" &&
-          (parsed.hostname.endsWith(".vercel.app") || parsed.hostname === "localhost")
-        ) {
+        if (parsed.protocol === "https:" && isAllowedDomain(parsed.hostname)) {
           return callback(null, true);
         }
       } catch {
         // invalid URL format
       }
 
-      return callback(new Error(`CORS blocked for origin: ${origin}`), false);
+      return callback(null, false);
     },
     methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization"]
+    allowedHeaders: ["Content-Type", "Authorization", "Accept", "mcp-session-id", "x-mcp-session-id"]
   })
 );
 
@@ -351,6 +361,12 @@ export function makeServer() {
 }
 
 app.post("/mcp", requireApiKey, async (req: Request, res: Response) => {
+  // Normalize Accept header for client compatibility with Model Context Protocol Streamable HTTP spec
+  const currentAccept = req.header("accept") ?? "";
+  if (!currentAccept.includes("text/event-stream") || !currentAccept.includes("application/json")) {
+    req.headers["accept"] = "application/json, text/event-stream";
+  }
+
   const server = makeServer();
   const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });
   res.on("close", () => { void transport.close(); void server.close(); });
@@ -363,8 +379,128 @@ app.post("/mcp", requireApiKey, async (req: Request, res: Response) => {
   }
 });
 
-app.get("/mcp", requireApiKey, (_req, res) => res.status(405).set("Allow", "POST").json({ error: "Use POST for this stateless MCP endpoint." }));
-app.delete("/mcp", requireApiKey, (_req, res) => res.status(405).set("Allow", "POST").json({ error: "Stateless demo endpoint does not support DELETE." }));
+app.get("/mcp", requireApiKey, async (req: Request, res: Response) => {
+  const accept = req.header("accept") ?? "";
+  if (accept.includes("text/event-stream")) {
+    const server = makeServer();
+    const transport = new StreamableHTTPServerTransport({ sessionIdGenerator: undefined, enableJsonResponse: true });
+    res.on("close", () => { void transport.close(); void server.close(); });
+    await server.connect(transport);
+    return transport.handleRequest(req, res);
+  }
+  return res.json({
+    service: "qorvex-vgil-syncai-mcp",
+    protocol: "Model Context Protocol (MCP)",
+    transport: "Streamable HTTP",
+    endpoint: "/mcp",
+    methods: ["POST", "GET"],
+    tools: [
+      "search_company_info",
+      "get_product_details",
+      "summarize_service",
+      "search_knowledge",
+      "get_project_status",
+      "create_report"
+    ],
+    status: "online"
+  });
+});
+
+app.delete("/mcp", requireApiKey, (_req, res) => res.status(405).set("Allow", "POST, GET").json({ error: "Stateless demo endpoint does not support DELETE." }));
+
+// OpenAPI 3.1 Specification for ChatGPT Custom GPT Actions
+app.get("/api/openapi.json", (_req: Request, res: Response) => {
+  const host = process.env.RAILWAY_PUBLIC_DOMAIN 
+    ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`
+    : "https://qorvex-vgil-backend-production.up.railway.app";
+
+  return res.json({
+    openapi: "3.1.0",
+    info: {
+      title: "QORVEX — VGIL Enterprise AI Connector API",
+      version: "0.2.0",
+      description: "Enterprise AI connector exposing verified knowledge and search from Virtual Galaxy Infotech Limited (VGIL)."
+    },
+    servers: [{ url: host }],
+    paths: {
+      "/api/search": {
+        get: {
+          operationId: "searchVGILKnowledge",
+          summary: "Search verified VGIL knowledge base",
+          description: "Search official company background, products, services, investor relations, and resources from VGIL.",
+          parameters: [
+            {
+              name: "q",
+              in: "query",
+              required: true,
+              description: "Search keyword or phrase (e.g. 'core banking', 'VGST', 'MIHAN')",
+              schema: { type: "string" }
+            },
+            {
+              name: "category",
+              in: "query",
+              required: false,
+              description: "Optional category filter: company, product, service, investor, resource, career",
+              schema: { type: "string", enum: ["company", "product", "service", "investor", "resource", "career"] }
+            },
+            {
+              name: "limit",
+              in: "query",
+              required: false,
+              description: "Maximum number of results to return (default 5)",
+              schema: { type: "integer", default: 5 }
+            }
+          ],
+          responses: {
+            "200": {
+              description: "Successful search results",
+              content: { "application/json": { schema: { type: "object" } } }
+            }
+          }
+        }
+      },
+      "/api/chat": {
+        post: {
+          operationId: "chatVGILAssistant",
+          summary: "Ask a question about VGIL with grounded answers",
+          description: "Submit a question about VGIL products, services, financials, or offices to receive a strictly grounded answer with citations.",
+          requestBody: {
+            required: true,
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  required: ["message"],
+                  properties: {
+                    message: { type: "string", description: "The inquiry about VGIL", maxLength: 1000 }
+                  }
+                }
+              }
+            }
+          },
+          responses: {
+            "200": {
+              description: "Grounded chat response",
+              content: { "application/json": { schema: { type: "object" } } }
+            }
+          }
+        }
+      },
+      "/health": {
+        get: {
+          operationId: "getHealthStatus",
+          summary: "System health and indexed records telemetry",
+          responses: {
+            "200": {
+              description: "System telemetry and record counts",
+              content: { "application/json": { schema: { type: "object" } } }
+            }
+          }
+        }
+      }
+    }
+  });
+});
 
 if (!process.argv[1]?.includes("test")) {
   app.listen(PORT, () => console.log(`QORVEX / VGIL SyncAI MCP demo listening on ${PORT}`));
