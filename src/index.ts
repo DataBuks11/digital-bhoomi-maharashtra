@@ -161,6 +161,7 @@ export function makeServer() {
       query: z.string().min(2).max(200).describe("Search query for VGIL company details, products, services, or financials"),
       category: z.enum(["company", "product", "service", "resource", "investor", "career"]).optional().describe("Optional category filter")
     },
+    { readOnlyHint: true },
     async ({ query, category }) => {
       const results = knowledgeStore.search(query, { category, limit: 5 });
       if (results.length === 0) {
@@ -203,6 +204,7 @@ export function makeServer() {
     {
       product_name_or_slug: z.string().min(2).max(120).describe("Product name or slug (e.g. 'core-banking-solution', 'erp-solution', 'digital-payments', 'imis-solution', 'conversational-ai-companion')")
     },
+    { readOnlyHint: true },
     async ({ product_name_or_slug }) => {
       let product = knowledgeStore.getBySlug(product_name_or_slug, "product");
       if (!product) {
@@ -253,6 +255,7 @@ export function makeServer() {
     {
       service_name_or_slug: z.string().min(2).max(120).describe("Service name or slug (e.g., 'application-development', 'it-infrastructure-development', 'vgst', 'dc-dr', 'ai-ml', 'mobile-computing')")
     },
+    { readOnlyHint: true },
     async ({ service_name_or_slug }) => {
       let service = knowledgeStore.getBySlug(service_name_or_slug, "service");
       if (!service) {
@@ -301,6 +304,7 @@ export function makeServer() {
     "search_knowledge",
     "Search indexed VGIL website knowledge base (company, products, services, investor relations, resources).",
     { query: z.string().min(2).max(200) },
+    { readOnlyHint: true },
     async ({ query }) => {
       const results = knowledgeStore.search(query, { limit: 5 });
       return {
@@ -328,6 +332,7 @@ export function makeServer() {
     "get_project_status",
     "Return illustrative project status for a demo; not connected to a real project system.",
     { project_name: z.string().min(2).max(120) },
+    { readOnlyHint: true },
     async ({ project_name }) => ({
       content: [{
         type: "text",
@@ -349,6 +354,7 @@ export function makeServer() {
     "create_report",
     "Format a draft report from notes supplied by the user. Does not save or send anything.",
     { title: z.string().min(2).max(120), notes: z.array(z.string().min(1).max(1000)).min(1).max(30) },
+    { readOnlyHint: true },
     async ({ title, notes }) => ({
       content: [{
         type: "text",
@@ -500,6 +506,22 @@ app.get("/api/openapi.json", (_req: Request, res: Response) => {
       }
     }
   });
+});
+
+// Domain Verification Challenge for OpenAI Apps SDK & ChatGPT App Directory
+app.get("/.well-known/openai-apps-challenge", (_req: Request, res: Response) => {
+  const token = process.env.OPENAI_APPS_CHALLENGE_TOKEN || "qorvex-openai-apps-challenge-verified";
+  res.setHeader("Content-Type", "text/plain");
+  return res.send(token);
+});
+
+// Public Legal & Compliance routes
+app.get("/privacy", (_req: Request, res: Response) => {
+  res.sendFile(path.resolve(process.cwd(), "public", "privacy.html"));
+});
+
+app.get("/terms", (_req: Request, res: Response) => {
+  res.sendFile(path.resolve(process.cwd(), "public", "terms.html"));
 });
 
 if (!process.argv[1]?.includes("test")) {

@@ -1,0 +1,73 @@
+{
+  "schema_version": "v1",
+  "name_for_human": "QORVEX — VGIL Enterprise Connector",
+  "name_for_model": "qorvex_vgil_connector",
+  "description_for_human": "Verified enterprise software solutions, core banking architecture, IT infrastructure services, and corporate facts from Virtual Galaxy Infotech Limited (VGIL).",
+  "description_for_model": "Access official, verified information about Virtual Galaxy Infotech Limited (VGIL), including its flagship Core Banking Solution (CBS E-Banker), ERP solutions, VGST smart technology, digital payments, corporate profile, MIHAN SEZ Nagpur software development facility, and published scale metrics (30B+ transactions, 200+ banks served, 99.9% uptime). All facts returned are strictly grounded in verified documentation without hallucination.",
+  "category": "business_and_enterprise",
+  "auth": {
+    "type": "service_http",
+    "authorization_type": "bearer",
+    "verification_tokens": {
+      "openai": "qorvex-openai-apps-challenge-verified"
+    }
+  },
+  "api": {
+    "type": "mcp",
+    "url": "https://qorvex-vgil-backend-production.up.railway.app/mcp",
+    "protocol": "streamable_http",
+    "openapi_url": "https://qorvex-vgil-backend-production.up.railway.app/api/openapi.json",
+    "has_user_authentication": false
+  },
+  "tools": [
+    {
+      "name": "search_company_info",
+      "description": "Search official VGIL corporate background, MIHAN SEZ facility, leadership, and contact data.",
+      "read_only": true,
+      "destructive": false
+    },
+    {
+      "name": "get_product_details",
+      "description": "Retrieve comprehensive specifications, metrics, and official URLs for VGIL products (e.g. Core Banking Solution, ERP Solution, Digital Payments).",
+      "read_only": true,
+      "destructive": false
+    },
+    {
+      "name": "summarize_service",
+      "description": "Summarize VGIL IT services and capabilities (e.g. VGST Smart Technology, Cloud DC/DR, Cybersecurity, Mobile Computing).",
+      "read_only": true,
+      "destructive": false
+    },
+    {
+      "name": "search_knowledge",
+      "description": "Universal keyword search across all 66 indexed VGIL website records.",
+      "read_only": true,
+      "destructive": false
+    },
+    {
+      "name": "get_project_status",
+      "description": "Retrieve illustrative project status and milestones for demo purposes.",
+      "read_only": true,
+      "destructive": false
+    },
+    {
+      "name": "create_report",
+      "description": "Format structured briefing drafts from user notes without saving or modifying external data.",
+      "read_only": true,
+      "destructive": false
+    }
+  ],
+  "branding": {
+    "logo_url": "https://public-nine-alpha-61.vercel.app/assets/icon-dark.svg",
+    "icon_light_url": "https://public-nine-alpha-61.vercel.app/assets/icon-light.svg",
+    "icon_dark_url": "https://public-nine-alpha-61.vercel.app/assets/icon-dark.svg"
+  },
+  "legal": {
+    "privacy_policy_url": "https://public-nine-alpha-61.vercel.app/privacy.html",
+    "terms_of_service_url": "https://public-nine-alpha-61.vercel.app/terms.html"
+  },
+  "contact": {
+    "support_email": "info@vgil.co.in",
+    "website_url": "https://vgipl-website.vercel.app/"
+  }
+}

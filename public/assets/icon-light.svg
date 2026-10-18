@@ -1,0 +1,38 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#F8FAFC"/>
+      <stop offset="100%" stop-color="#E2E8F0"/>
+    </linearGradient>
+    <linearGradient id="accentLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0284C7"/>
+      <stop offset="100%" stop-color="#0369A1"/>
+    </linearGradient>
+    <linearGradient id="primaryLightGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#0F172A"/>
+      <stop offset="100%" stop-color="#1E293B"/>
+    </linearGradient>
+  </defs>
+  
+  <!-- Rounded Base Card -->
+  <rect width="512" height="512" rx="108" fill="url(#bgLightGrad)" stroke="#CBD5E1" stroke-width="6"/>
+  
+  <!-- Outer Subtle Ring -->
+  <circle cx="256" cy="256" r="180" fill="none" stroke="#94A3B8" stroke-width="4" stroke-dasharray="16 8"/>
+  
+  <!-- Node Interconnect Geometry (Connector Symbol) -->
+  <path d="M160 256 L256 160 L352 256 L256 352 Z" fill="none" stroke="url(#accentLightGrad)" stroke-width="20" stroke-linejoin="round"/>
+  
+  <!-- Central Core Hexagon -->
+  <polygon points="256,196 308,226 308,286 256,316 204,286 204,226" fill="#FFFFFF" stroke="url(#primaryLightGrad)" stroke-width="10"/>
+  
+  <!-- Stylized "Q" Connector Accent -->
+  <circle cx="256" cy="256" r="28" fill="url(#accentLightGrad)"/>
+  <path d="M272 272 L320 320" stroke="url(#primaryLightGrad)" stroke-width="16" stroke-linecap="round"/>
+  
+  <!-- Satellite Nodes -->
+  <circle cx="256" cy="160" r="16" fill="url(#accentLightGrad)"/>
+  <circle cx="352" cy="256" r="16" fill="url(#accentLightGrad)"/>
+  <circle cx="256" cy="352" r="16" fill="url(#accentLightGrad)"/>
+  <circle cx="160" cy="256" r="16" fill="url(#accentLightGrad)"/>
+</svg>
