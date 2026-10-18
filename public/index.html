@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>QORVEX — Enterprise AI Connector | Virtual Galaxy Infotech Limited</title>
+  <meta name="description" content="QORVEX: Enterprise MCP-based AI Connector for Virtual Galaxy Infotech Limited (VGIL). Grounded intelligence powered by DeepSeek V4.1 Flash via TokenHarbor.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+  <div class="app-layout">
+    <!-- SIDEBAR -->
+    <aside class="sidebar" id="sidebar">
+      <div class="sidebar-header">
+        <div class="brand-container">
+          <div class="brand-icon">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+              <path d="M12 2L2 7L12 12L22 7L12 2Z" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 17L12 22L22 17" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+              <path d="M2 12L12 17L22 12" stroke="#38BDF8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            </svg>
+          </div>
+          <div class="brand-text">
+            <span class="brand-title">QORVEX</span>
+            <span class="brand-subtitle">AI Connector</span>
+          </div>
+        </div>
+        <div class="org-badge">
+          <span class="org-dot"></span>
+          <span class="org-name">Virtual Galaxy Infotech</span>
+        </div>
+      </div>
+
+      <nav class="sidebar-nav">
+        <button class="nav-item active" data-view="chat" id="nav-chat">
+          <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M21 15a2 2 0 0 1-2 2H7l-4 4V5a2 2 0 0 1 2-2h14a2 2 0 0 1 2 2z"></path>
+          </svg>
+          <span>AI Assistant</span>
+          <span class="nav-badge">Live</span>
+        </button>
+
+        <button class="nav-item" data-view="search" id="nav-search">
+          <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="11" cy="11" r="8"></circle>
+            <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+          </svg>
+          <span>Knowledge Search</span>
+        </button>
+
+        <button class="nav-item" data-view="catalog" id="nav-catalog">
+          <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <rect x="2" y="3" width="20" height="14" rx="2" ry="2"></rect>
+            <line x1="8" y1="21" x2="16" y2="21"></line>
+            <line x1="12" y1="17" x2="12" y2="21"></line>
+          </svg>
+          <span>Products & Services</span>
+          <span class="nav-count" id="nav-catalog-count">24</span>
+        </button>
+
+        <button class="nav-item" data-view="mcp" id="nav-mcp">
+          <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <polyline points="16 18 22 12 16 6"></polyline>
+            <polyline points="8 6 2 12 8 18"></polyline>
+          </svg>
+          <span>MCP Integration</span>
+        </button>
+
+        <button class="nav-item" data-view="status" id="nav-status">
+          <svg class="nav-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M22 12h-4l-3 9L9 3l-3 9H2"></path>
+          </svg>
+          <span>System Status</span>
+        </button>
+      </nav>
+
+      <div class="sidebar-footer">
+        <div class="model-pill">
+          <span class="model-label">MODEL</span>
+          <span class="model-name" id="sidebar-model-name">DeepSeek V4.1 Flash</span>
+        </div>
+        <a href="https://vgipl-website.vercel.app/" target="_blank" rel="noopener noreferrer" class="external-link">
+          <span>Official VGIL Portal</span>
+          <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <path d="M18 13v6a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h6"></path>
+            <polyline points="15 3 21 3 21 9"></polyline>
+            <line x1="10" y1="14" x2="21" y2="3"></line>
+          </svg>
+        </a>
+      </div>
+    </aside>
+
+    <!-- MAIN CONTENT AREA -->
+    <main class="main-workspace">
+      <!-- TOP NAVBAR -->
+      <header class="topbar">
+        <div class="topbar-left">
+          <button class="mobile-toggle" id="mobile-toggle" aria-label="Toggle Navigation">
+            <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="3" y1="12" x2="21" y2="12"></line>
+              <line x1="3" y1="6" x2="21" y2="6"></line>
+              <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+          </button>
+          <div class="current-view-title" id="topbar-title">AI Assistant</div>
+        </div>
+
+        <div class="topbar-right">
+          <div class="status-indicator" id="topbar-status-indicator">
+            <span class="pulse-indicator"></span>
+            <span class="status-text" id="topbar-status-text">Connecting...</span>
+          </div>
+          <button class="btn btn-secondary btn-sm" id="btn-new-chat">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+              <line x1="12" y1="5" x2="12" y2="19"></line>
+              <line x1="5" y1="12" x2="19" y2="12"></line>
+            </svg>
+            <span>New Chat</span>
+          </button>
+        </div>
+      </header>
+
+      <!-- VIEW 1: AI ASSISTANT -->
+      <section class="view-panel active" id="view-chat">
+        <div class="chat-wrapper">
+          <div class="chat-messages" id="chat-messages">
+            <!-- Initial Welcome Message -->
+            <div class="message-card message-bot">
+              <div class="message-avatar">
+                <div class="bot-badge">Q</div>
+              </div>
+              <div class="message-body">
+                <div class="message-sender">QORVEX Intelligence <span class="time-stamp">Enterprise Connector</span></div>
+                <div class="message-text">
+                  <p>Welcome to <strong>QORVEX</strong>, the enterprise AI connector for <strong>Virtual Galaxy Infotech Limited (VGIL)</strong>.</p>
+                  <p>I provide verified answers regarding VGIL's <strong>Core Banking Solutions (CBS E-Banker)</strong>, enterprise ERP, smart technologies (VGST), cybersecurity, cloud infrastructure, and stock exchange listing milestones. All answers are grounded strictly in indexed records from the official VGIL website.</p>
+                </div>
+                <div class="suggested-queries">
+                  <div class="suggested-title">Suggested Inquiries:</div>
+                  <div class="chip-group">
+                    <button class="query-chip" data-query="What core banking solutions does VGIL offer?">Core Banking Solutions</button>
+                    <button class="query-chip" data-query="Where are VGIL's headquarters and development centres?">Headquarters & SEZ</button>
+                    <button class="query-chip" data-query="What smart technology solutions are provided under VGST?">VGST Smart Tech</button>
+                    <button class="query-chip" data-query="What are VGIL's digital payment capabilities?">Digital Payments</button>
+                    <button class="query-chip" data-query="What is VGIL's transaction volume and scale?">Volume & Scale</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- Chat Input Tray -->
+          <div class="chat-input-container">
+            <form id="chat-form" class="chat-form">
+              <div class="input-box-wrapper">
+                <textarea
+                  id="chat-input"
+                  class="chat-textarea"
+                  placeholder="Ask a question about VGIL products, services, scale or governance..."
+                  rows="1"
+                  maxlength="1000"
+                ></textarea>
+                <div class="input-actions">
+                  <span class="char-count" id="char-count">0 / 1000</span>
+                  <button type="submit" class="btn btn-primary btn-send" id="btn-send">
+                    <span>Send</span>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                      <line x1="22" y1="2" x2="11" y2="13"></line>
+                      <polygon points="22 2 15 22 11 13 2 9 22 2"></polygon>
+                    </svg>
+                  </button>
+                </div>
+              </div>
+            </form>
+            <div class="chat-disclaimer">
+              <span>Grounded in 66 verified VGIL records via DeepSeek V4.1 Flash on TokenHarbor. Unsupported questions are explicitly unconfirmed.</span>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 2: KNOWLEDGE SEARCH -->
+      <section class="view-panel" id="view-search">
+        <div class="search-view-container">
+          <div class="view-header">
+            <h1 class="view-heading">VGIL Knowledge Base Search</h1>
+            <p class="view-subheading">Query all 66 verified records indexed directly from the VGIL website (<a href="https://vgipl-website.vercel.app/" target="_blank" rel="noopener noreferrer">vgipl-website.vercel.app</a>).</p>
+          </div>
+
+          <div class="search-controls">
+            <div class="search-input-group">
+              <svg class="search-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <circle cx="11" cy="11" r="8"></circle>
+                <line x1="21" y1="21" x2="16.65" y2="16.65"></line>
+              </svg>
+              <input type="text" id="knowledge-search-input" class="search-field" placeholder="Search products, services, milestones, certifications, policies..." autocomplete="off">
+              <button class="search-clear-btn" id="search-clear-btn" style="display: none;">&times;</button>
+            </div>
+
+            <div class="category-filter-bar">
+              <button class="filter-chip active" data-category="">All Categories</button>
+              <button class="filter-chip" data-category="product">Products</button>
+              <button class="filter-chip" data-category="service">Services</button>
+              <button class="filter-chip" data-category="company">Company</button>
+              <button class="filter-chip" data-category="resource">Resources</button>
+              <button class="filter-chip" data-category="investor">Investors</button>
+              <button class="filter-chip" data-category="career">Careers</button>
+            </div>
+          </div>
+
+          <div class="search-results-meta" id="search-results-meta" style="display: none;">
+            <span id="results-count-text">Found 0 results</span>
+          </div>
+
+          <div class="search-results-grid" id="search-results-container">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 3: PRODUCTS & SERVICES -->
+      <section class="view-panel" id="view-catalog">
+        <div class="catalog-view-container">
+          <div class="view-header">
+            <h1 class="view-heading">Verified Products & Services Catalog</h1>
+            <p class="view-subheading">Comprehensive enterprise solutions provided by Virtual Galaxy Infotech Limited.</p>
+          </div>
+
+          <div class="catalog-tabs">
+            <button class="tab-btn active" data-catalog-tab="all">All Solutions (<span id="count-all">24</span>)</button>
+            <button class="tab-btn" data-catalog-tab="product">Products (<span id="count-products">17</span>)</button>
+            <button class="tab-btn" data-catalog-tab="service">IT Services (<span id="count-services">7</span>)</button>
+          </div>
+
+          <div class="catalog-grid" id="catalog-grid">
+            <!-- Populated dynamically via JS -->
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 4: MCP INTEGRATION -->
+      <section class="view-panel" id="view-mcp">
+        <div class="mcp-view-container">
+          <div class="view-header">
+            <h1 class="view-heading">Model Context Protocol (MCP) Integration</h1>
+            <p class="view-subheading">QORVEX serves as an enterprise MCP gateway connecting AI clients directly to VGIL systems.</p>
+          </div>
+
+          <!-- Architecture Card -->
+          <div class="mcp-card">
+            <h3 class="card-title">Architecture & Security Design</h3>
+            <div class="architecture-diagram">
+              <div class="arch-box client-box">
+                <span class="arch-title">AI Client / IDE</span>
+                <span class="arch-desc">Claude Desktop / Antigravity</span>
+              </div>
+              <div class="arch-arrow">
+                <span>Streamable HTTP</span>
+                <span>(POST /mcp)</span>
+              </div>
+              <div class="arch-box server-box">
+                <span class="arch-title">QORVEX MCP Gateway</span>
+                <span class="arch-desc">Express + @modelcontextprotocol/sdk</span>
+              </div>
+              <div class="arch-arrow">
+                <span>Grounded Retrieval</span>
+              </div>
+              <div class="arch-box data-box">
+                <span class="arch-title">VGIL Knowledge Store</span>
+                <span class="arch-desc">66 Verified Records + TokenHarbor</span>
+              </div>
+            </div>
+            <div class="notice-callout">
+              <strong>Connection Notice:</strong> The MCP endpoint is running locally on <code>/mcp</code>. To connect Claude Desktop or an external MCP client, add this endpoint to your client's <code>claude_desktop_config.json</code> with the Bearer authorization key. No credentials are ever sent to browser clients.
+            </div>
+          </div>
+
+          <!-- Registered Tools Section -->
+          <div class="mcp-card">
+            <h3 class="card-title">Registered MCP Tools (6 Verified)</h3>
+            <div class="tool-list">
+              <div class="tool-item">
+                <div class="tool-header">
+                  <code class="tool-name">search_company_info</code>
+                  <span class="badge badge-success">Active</span>
+                </div>
+                <p class="tool-desc">Search official VGIL company information, achievements, financials, locations, leadership, products, and services from the indexed website.</p>
+                <div class="tool-schema">
+                  <span class="schema-label">Arguments:</span> <code>query: string (2-200 chars)</code>, <code>category?: enum</code>
+                </div>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-header">
+                  <code class="tool-name">get_product_details</code>
+                  <span class="badge badge-success">Active</span>
+                </div>
+                <p class="tool-desc">Retrieve comprehensive specifications, features, metrics, and official source URL for any VGIL product (e.g. Core Banking Solution, ERP, Digital Payments, IMIS, Conversational AI).</p>
+                <div class="tool-schema">
+                  <span class="schema-label">Arguments:</span> <code>product_name_or_slug: string (2-120 chars)</code>
+                </div>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-header">
+                  <code class="tool-name">summarize_service</code>
+                  <span class="badge badge-success">Active</span>
+                </div>
+                <p class="tool-desc">Summarize official VGIL IT services and capabilities (e.g., Application Development, IT Infrastructure, VGST Smart Technology, DC & DR, Mobile Computing, AI & ML, Digital Solutions) with metrics and source URLs.</p>
+                <div class="tool-schema">
+                  <span class="schema-label">Arguments:</span> <code>service_name_or_slug: string (2-120 chars)</code>
+                </div>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-header">
+                  <code class="tool-name">search_knowledge</code>
+                  <span class="badge badge-success">Active</span>
+                </div>
+                <p class="tool-desc">General search across all indexed VGIL website knowledge base categories.</p>
+                <div class="tool-schema">
+                  <span class="schema-label">Arguments:</span> <code>query: string (2-200 chars)</code>
+                </div>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-header">
+                  <code class="tool-name">get_project_status</code>
+                  <span class="badge badge-warning">Demo Starter</span>
+                </div>
+                <p class="tool-desc">Illustrative project delivery status for enterprise demonstration (backward compatible).</p>
+                <div class="tool-schema">
+                  <span class="schema-label">Arguments:</span> <code>project_name: string</code>
+                </div>
+              </div>
+
+              <div class="tool-item">
+                <div class="tool-header">
+                  <code class="tool-name">create_report</code>
+                  <span class="badge badge-warning">Demo Starter</span>
+                </div>
+                <p class="tool-desc">Draft report generator from bulleted notes (backward compatible).</p>
+                <div class="tool-schema">
+                  <span class="schema-label">Arguments:</span> <code>title: string</code>, <code>notes: string[]</code>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <!-- VIEW 5: SYSTEM STATUS -->
+      <section class="view-panel" id="view-status">
+        <div class="status-view-container">
+          <div class="view-header">
+            <h1 class="view-heading">System Status & Environment Health</h1>
+            <p class="view-subheading">Live telemetry read from <code>/health</code> and the knowledge store.</p>
+          </div>
+
+          <!-- Status Grid -->
+          <div class="status-kpi-grid">
+            <div class="kpi-card">
+              <span class="kpi-title">Backend Service</span>
+              <div class="kpi-value-group">
+                <span class="kpi-dot dot-online" id="kpi-service-dot"></span>
+                <span class="kpi-value" id="kpi-service-status">Checking...</span>
+              </div>
+              <span class="kpi-meta" id="kpi-service-mode">Mode: loading</span>
+            </div>
+
+            <div class="kpi-card">
+              <span class="kpi-title">Knowledge Records</span>
+              <div class="kpi-value-group">
+                <span class="kpi-value" id="kpi-records-count">--</span>
+              </div>
+              <span class="kpi-meta">Indexed from VGIL Website</span>
+            </div>
+
+            <div class="kpi-card">
+              <span class="kpi-title">LLM Gateway</span>
+              <div class="kpi-value-group">
+                <span class="kpi-dot dot-online" id="kpi-llm-dot"></span>
+                <span class="kpi-value" id="kpi-llm-status">Checking...</span>
+              </div>
+              <span class="kpi-meta" id="kpi-llm-model">Router: TokenHarbor</span>
+            </div>
+
+            <div class="kpi-card">
+              <span class="kpi-title">Security & Isolation</span>
+              <div class="kpi-value-group">
+                <span class="kpi-value">Secure</span>
+              </div>
+              <span class="kpi-meta">0 client-side credentials</span>
+            </div>
+          </div>
+
+          <!-- Category Breakdown -->
+          <div class="mcp-card">
+            <div class="card-header-flex">
+              <h3 class="card-title">Indexed Records Distribution</h3>
+              <button class="btn btn-secondary btn-sm" id="btn-refresh-status">Refresh Status</button>
+            </div>
+            <div class="category-bars" id="category-bars">
+              <!-- Dynamically rendered -->
+            </div>
+          </div>
+
+          <!-- Verified Source Endpoints -->
+          <div class="mcp-card">
+            <h3 class="card-title">Verified Public Source Endpoints</h3>
+            <p class="text-muted">All extracted knowledge is mapped to live, accessible pages on the official VGIL website:</p>
+            <ul class="verified-url-list">
+              <li><code>https://vgipl-website.vercel.app/</code> — Home Page & Global Metrics</li>
+              <li><code>https://vgipl-website.vercel.app/about</code> — Corporate Overview & Incorporation</li>
+              <li><code>https://vgipl-website.vercel.app/contact</code> — Registered & Corporate Offices (Nagpur)</li>
+              <li><code>https://vgipl-website.vercel.app/products/*</code> — 17 Verified Product Solutions</li>
+              <li><code>https://vgipl-website.vercel.app/services/*</code> — 7 Verified IT Services</li>
+              <li><code>https://vgipl-website.vercel.app/investors/*</code> — 14 Corporate Governance & Reports</li>
+              <li><code>https://vgipl-website.vercel.app/blog/*</code> — CBS & Enterprise Technology Insights</li>
+            </ul>
+          </div>
+        </div>
+      </section>
+    </main>
+  </div>
+
+  <script src="/config.js"></script>
+  <script src="/app.js"></script>
+</body>
+</html>

@@ -1,0 +1,2076 @@
+[
+  {
+    "id": "COMP-overview",
+    "category": "company",
+    "slug": "about",
+    "title": "Virtual Galaxy Infotech Limited (VGIL) - Overview",
+    "subtitle": "Leading IT Solutions Provider & Financial Enterprise Software Pioneer",
+    "url": "https://vgipl-website.vercel.app/about",
+    "summary": "Virtual Galaxy Infotech Limited (VGIL), incorporated in 1997, is a premier banking and financial technology enterprise headquartered in Nagpur, Maharashtra, India. VGIL is officially listed on NSE India after an IPO that attracted ₹14,440 Cr in bids.",
+    "content": "Virtual Galaxy Infotech Limited (VGIL) is an Indian information technology company incorporated in 1997 (CIN: L93000MH1997PLC110645). The company specializes in Core Banking Solutions (CBS E-Banker), ERP solutions, cloud computing, cyber security, digital lending, and IT infrastructure. VGIL operates its flagship Software Development Centre at MIHAN SEZ in Nagpur, Maharashtra. Key Achievements & Metrics: - Total banks served: 200+ financial institutions and banks across India and internationally. - Transactions processed: Over 30 Billion+ cumulative transactions. - Accounts managed: 10 Million+ accounts powered by VGIL systems. - Average transaction processing time: 10 milliseconds with 99.9% uptime SLA. - Stock exchange listing: Listed on the National Stock Exchange of India (NSE India) following a ₹93.29 Cr IPO that received bids worth ₹14,440 Cr. - International footprint: Landmark mandates including Botswana Development Corporation and global contracts exceeding $1.1 Million. - Recognitions: Sardar Patel Unity Award for Leading IT Solutions Provider of the Year.",
+    "metrics": [
+      {
+        "value": "1997",
+        "label": "Year Incorporated"
+      },
+      {
+        "value": "200+",
+        "label": "Banks Served"
+      },
+      {
+        "value": "30B+",
+        "label": "Transactions Processed"
+      },
+      {
+        "value": "10M+",
+        "label": "Accounts Managed"
+      },
+      {
+        "value": "99.9%",
+        "label": "System Uptime"
+      },
+      {
+        "value": "₹14,440 Cr",
+        "label": "IPO Bids Received"
+      }
+    ],
+    "tags": [
+      "virtual",
+      "galaxy",
+      "infotech",
+      "limited",
+      "vgil",
+      "overview",
+      "banking",
+      "nse",
+      "nagpur",
+      "mihan",
+      "history",
+      "milestones"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "COMP-contact-offices",
+    "category": "company",
+    "slug": "contact",
+    "title": "Virtual Galaxy Infotech Limited - Offices & Contact Information",
+    "subtitle": "Registered Office, Corporate Office, Development Centre & Communications",
+    "url": "https://vgipl-website.vercel.app/contact",
+    "summary": "Official contact channels, registered office in Vivekanand Nagar Nagpur, corporate office at Chhatrapati Square Ring Road, and MIHAN SEZ Development Centre.",
+    "content": "Virtual Galaxy Infotech Limited Contact Channels & Office Addresses: 1. Registered Office: Plot No. 26, The Nagpur Divisional Insurance Employees Co-operative Housing Society Limited, Vivekanand Nagar, Nagpur, Maharashtra, India - 440015. 2. Corporate Office / Operations: 3, Central Excise Colony, Chhatrapati Square, Ring Road, Nagpur – 440015, Maharashtra, India. 3. Software Development Centre: MIHAN SEZ Development Centre, Nagpur, Maharashtra. 4. Email Addresses: - General Inquiries: info@vginfotech.ai / info@vgipl.in - Pre-sales & Business: presales@vginfotech.ai - Investor Relations: investors@vginfotech.ai - Company Secretary: company.secretary@vginfotech.ai - Careers & HR: careers@vgipl.in / hr@vginfotech.ai - Customer Service Head: cs.head@vgipl.in - RBI Nodal Officer: rbi.nodalofficer@vgipl.in 5. Corporate Identification Number (CIN): L93000MH1997PLC110645.",
+    "tags": [
+      "contact",
+      "address",
+      "nagpur",
+      "vivekanand",
+      "nagar",
+      "chhatrapati",
+      "square",
+      "mihan",
+      "sez",
+      "email",
+      "phone",
+      "cin",
+      "presales",
+      "investors"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-core-banking-solution",
+    "category": "product",
+    "slug": "core-banking-solution",
+    "title": "Core Banking Solution",
+    "subtitle": "Next-Generation Banking Enterprise Suit",
+    "url": "https://vgipl-website.vercel.app/products/core-banking-solution",
+    "summary": "Empower your financial institution with our robust, scalable, and secure core banking platform designed for modern banking needs.",
+    "content": "Core Banking Solution (Next-Generation Banking Enterprise Suit). Empower your financial institution with our robust, scalable, and secure core banking platform designed for modern banking needs. Key Features: Seamless Scalability: Easily scale operations as your customer base grows without compromising performance.. Real-Time Processing: Ensure all transactions and account updates happen in real-time across all channels.. High Security Standards: Built with enterprise-grade security to protect sensitive financial data and prevent fraud. Metrics & Track Record: Transactions processed: 30B+, Total number of banks served: 200+, System uptime: 99.9%, Avg transaction processing time: 10ms, Geographical coverage: Global, Accounts managed: 10M+",
+    "features": [
+      {
+        "title": "Seamless Scalability",
+        "description": "Easily scale operations as your customer base grows without compromising performance."
+      },
+      {
+        "title": "Real-Time Processing",
+        "description": "Ensure all transactions and account updates happen in real-time across all channels."
+      },
+      {
+        "title": "High Security Standards",
+        "description": "Built with enterprise-grade security to protect sensitive financial data and prevent fraud."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "30B+",
+        "label": "Transactions processed"
+      },
+      {
+        "value": "200+",
+        "label": "Total number of banks served"
+      },
+      {
+        "value": "99.9%",
+        "label": "System uptime"
+      },
+      {
+        "value": "10ms",
+        "label": "Avg transaction processing time"
+      },
+      {
+        "value": "Global",
+        "label": "Geographical coverage"
+      },
+      {
+        "value": "10M+",
+        "label": "Accounts managed"
+      }
+    ],
+    "tags": [
+      "core",
+      "banking",
+      "solution",
+      "next-generation",
+      "enterprise",
+      "suit",
+      "core-banking-solution",
+      "product",
+      "seamless",
+      "scalability",
+      "real-time",
+      "processing",
+      "high",
+      "security",
+      "standards"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-imis-solution",
+    "category": "product",
+    "slug": "imis-solution",
+    "title": "Information Management Platform",
+    "subtitle": "Intelligent Management Information System",
+    "url": "https://vgipl-website.vercel.app/products/imis-solution",
+    "summary": "Transform raw data into actionable insights with our advanced Management Information System tailored for informed decision-making.",
+    "content": "Information Management Platform (Intelligent Management Information System). Transform raw data into actionable insights with our advanced Management Information System tailored for informed decision-making. Key Features: Custom Dashboards: Create personalized views of key performance indicators and critical metrics.. Automated Reporting: Generate comprehensive reports on a scheduled basis, saving time and reducing human error.. Data Integration: Seamlessly connect multiple data sources for a unified view of organizational performance. Metrics & Track Record: Transactions processed: 2M+, Total number of clients served: 10+, System uptime: 99.9%",
+    "features": [
+      {
+        "title": "Custom Dashboards",
+        "description": "Create personalized views of key performance indicators and critical metrics."
+      },
+      {
+        "title": "Automated Reporting",
+        "description": "Generate comprehensive reports on a scheduled basis, saving time and reducing human error."
+      },
+      {
+        "title": "Data Integration",
+        "description": "Seamlessly connect multiple data sources for a unified view of organizational performance."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "2M+",
+        "label": "Transactions processed"
+      },
+      {
+        "value": "10+",
+        "label": "Total number of clients served"
+      },
+      {
+        "value": "99.9%",
+        "label": "System uptime"
+      }
+    ],
+    "tags": [
+      "information",
+      "management",
+      "platform",
+      "intelligent",
+      "system",
+      "imis-solution",
+      "product",
+      "custom",
+      "dashboards",
+      "automated",
+      "reporting",
+      "data",
+      "integration"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-erp-solution",
+    "category": "product",
+    "slug": "erp-solution",
+    "title": "ERP Solution",
+    "subtitle": "Unified Enterprise Resource Planning",
+    "url": "https://vgipl-website.vercel.app/products/erp-solution",
+    "summary": "Streamline your business operations across finance, HR, manufacturing, and supply chain with our comprehensive ERP platform.",
+    "content": "ERP Solution (Unified Enterprise Resource Planning). Streamline your business operations across finance, HR, manufacturing, and supply chain with our comprehensive ERP platform. Key Features: Centralized Database: Eliminate data silos with a single source of truth for all your business processes.. Workflow Automation: Automate repetitive tasks and approval processes to increase overall efficiency.. Inventory Management: Track stock levels in real-time, predict demand, and optimize procurement. Metrics & Track Record: Industrial Sectors: 10+, Total number of clients served: 50+, Ready External Integrations: 30+",
+    "features": [
+      {
+        "title": "Centralized Database",
+        "description": "Eliminate data silos with a single source of truth for all your business processes."
+      },
+      {
+        "title": "Workflow Automation",
+        "description": "Automate repetitive tasks and approval processes to increase overall efficiency."
+      },
+      {
+        "title": "Inventory Management",
+        "description": "Track stock levels in real-time, predict demand, and optimize procurement."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "10+",
+        "label": "Industrial Sectors"
+      },
+      {
+        "value": "50+",
+        "label": "Total number of clients served"
+      },
+      {
+        "value": "30+",
+        "label": "Ready External Integrations"
+      }
+    ],
+    "tags": [
+      "erp",
+      "solution",
+      "unified",
+      "enterprise",
+      "resource",
+      "planning",
+      "erp-solution",
+      "product",
+      "centralized",
+      "database",
+      "workflow",
+      "automation",
+      "inventory",
+      "management"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-digital-payments",
+    "category": "product",
+    "slug": "digital-payments",
+    "title": "Digital Payments",
+    "subtitle": "Secure and Instant Transaction Processing",
+    "url": "https://vgipl-website.vercel.app/products/digital-payments",
+    "summary": "Provide your customers with fast, secure, and flexible digital payment options to elevate the checkout and transaction experience.",
+    "content": "Digital Payments (Secure and Instant Transaction Processing). Provide your customers with fast, secure, and flexible digital payment options to elevate the checkout and transaction experience. Key Features: Multi-Channel Support: Accept payments via web, mobile, QR codes, and point-of-sale systems.. Fraud Detection: Utilize AI-driven algorithms to detect and block fraudulent transactions instantly.. Instant Settlements: Improve cash flow with real-time settlement and reconciliation. Metrics & Track Record: Services Enabled: 30+, Seamless Onboarding: e-KYC, System uptime: 99.9%",
+    "features": [
+      {
+        "title": "Multi-Channel Support",
+        "description": "Accept payments via web, mobile, QR codes, and point-of-sale systems."
+      },
+      {
+        "title": "Fraud Detection",
+        "description": "Utilize AI-driven algorithms to detect and block fraudulent transactions instantly."
+      },
+      {
+        "title": "Instant Settlements",
+        "description": "Improve cash flow with real-time settlement and reconciliation."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "30+",
+        "label": "Services Enabled"
+      },
+      {
+        "value": "e-KYC",
+        "label": "Seamless Onboarding"
+      },
+      {
+        "value": "99.9%",
+        "label": "System uptime"
+      }
+    ],
+    "tags": [
+      "digital",
+      "payments",
+      "secure",
+      "instant",
+      "transaction",
+      "processing",
+      "digital-payments",
+      "product",
+      "multi-channel",
+      "support",
+      "fraud",
+      "detection",
+      "settlements"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-agriculture-trading",
+    "category": "product",
+    "slug": "agriculture-trading",
+    "title": "Agriculture Trading",
+    "subtitle": "Digital Marketplace for Agri-Commodities",
+    "url": "https://vgipl-website.vercel.app/products/agriculture-trading",
+    "summary": "Connect farmers, traders, and buyers on a transparent digital platform designed to optimize agricultural supply chains.",
+    "content": "Agriculture Trading (Digital Marketplace for Agri-Commodities). Connect farmers, traders, and buyers on a transparent digital platform designed to optimize agricultural supply chains. Key Features: Price Discovery: Provide real-time market prices to ensure fair trading and maximum profitability.. Supply Chain Tracking: Trace commodities from farm to fork, ensuring quality and transparency.. Smart Contracts: Automate agreements and payments upon successful delivery using blockchain. Metrics & Track Record: Total number of clients served: 125+, Auctioned Transactions: 10M+, Cumulative Transaction Value: 15B+",
+    "features": [
+      {
+        "title": "Price Discovery",
+        "description": "Provide real-time market prices to ensure fair trading and maximum profitability."
+      },
+      {
+        "title": "Supply Chain Tracking",
+        "description": "Trace commodities from farm to fork, ensuring quality and transparency."
+      },
+      {
+        "title": "Smart Contracts",
+        "description": "Automate agreements and payments upon successful delivery using blockchain."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "125+",
+        "label": "Total number of clients served"
+      },
+      {
+        "value": "10M+",
+        "label": "Auctioned Transactions"
+      },
+      {
+        "value": "15B+",
+        "label": "Cumulative Transaction Value"
+      }
+    ],
+    "tags": [
+      "agriculture",
+      "trading",
+      "digital",
+      "marketplace",
+      "agri-commodities",
+      "agriculture-trading",
+      "product",
+      "price",
+      "discovery",
+      "supply",
+      "chain",
+      "tracking",
+      "smart",
+      "contracts"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-post-mortem-management",
+    "category": "product",
+    "slug": "post-mortem-management",
+    "title": "Post-Mortem Management",
+    "subtitle": "Comprehensive Autopsy and Forensic Management",
+    "url": "https://vgipl-website.vercel.app/products/post-mortem-management",
+    "summary": "A specialized digital solution to streamline forensic documentation, manage autopsy reports, and track evidence securely.",
+    "content": "Post-Mortem Management (Comprehensive Autopsy and Forensic Management). A specialized digital solution to streamline forensic documentation, manage autopsy reports, and track evidence securely. Key Features: Digital Documentation: Replace paper records with secure, easily searchable digital autopsy reports.. Chain of Custody: Track evidence and samples accurately to ensure legal integrity and compliance.. Inter-Agency Sharing: Securely share critical reports with law enforcement and medical authorities.",
+    "features": [
+      {
+        "title": "Digital Documentation",
+        "description": "Replace paper records with secure, easily searchable digital autopsy reports."
+      },
+      {
+        "title": "Chain of Custody",
+        "description": "Track evidence and samples accurately to ensure legal integrity and compliance."
+      },
+      {
+        "title": "Inter-Agency Sharing",
+        "description": "Securely share critical reports with law enforcement and medical authorities."
+      }
+    ],
+    "metrics": [],
+    "tags": [
+      "post-mortem",
+      "management",
+      "comprehensive",
+      "autopsy",
+      "forensic",
+      "post-mortem-management",
+      "product",
+      "digital",
+      "documentation",
+      "chain",
+      "custody",
+      "inter-agency",
+      "sharing"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-end-to-end-cyber-security",
+    "category": "product",
+    "slug": "end-to-end-cyber-security",
+    "title": "End-to-End Cyber Security",
+    "subtitle": "Proactive Threat Defense and Monitoring",
+    "url": "https://vgipl-website.vercel.app/products/end-to-end-cyber-security",
+    "summary": "Protect your digital assets with our comprehensive cybersecurity suite, featuring real-time monitoring and threat mitigation.",
+    "content": "End-to-End Cyber Security (Proactive Threat Defense and Monitoring). Protect your digital assets with our comprehensive cybersecurity suite, featuring real-time monitoring and threat mitigation. Key Features: Continuous Monitoring: 24/7 surveillance of your network infrastructure to identify anomalies instantly.. Vulnerability Assessment: Regular automated scans to find and patch security weaknesses before they are exploited.. Incident Response: Rapid containment and recovery protocols to minimize damage during a breach. Metrics & Track Record: Round the clock availability: 24/7, PCI-DSS, HIPPA, CERT-IN: Compliance, Security Operations Centre as a Service: SOCaaS",
+    "features": [
+      {
+        "title": "Continuous Monitoring",
+        "description": "24/7 surveillance of your network infrastructure to identify anomalies instantly."
+      },
+      {
+        "title": "Vulnerability Assessment",
+        "description": "Regular automated scans to find and patch security weaknesses before they are exploited."
+      },
+      {
+        "title": "Incident Response",
+        "description": "Rapid containment and recovery protocols to minimize damage during a breach."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "24/7",
+        "label": "Round the clock availability"
+      },
+      {
+        "value": "Compliance",
+        "label": "PCI-DSS, HIPPA, CERT-IN"
+      },
+      {
+        "value": "SOCaaS",
+        "label": "Security Operations Centre as a Service"
+      }
+    ],
+    "tags": [
+      "end-to-end",
+      "cyber",
+      "security",
+      "proactive",
+      "threat",
+      "defense",
+      "monitoring",
+      "end-to-end-cyber-security",
+      "product",
+      "continuous",
+      "vulnerability",
+      "assessment",
+      "incident",
+      "response"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-conversational-ai-companion",
+    "category": "product",
+    "slug": "conversational-ai-companion",
+    "title": "Conversational AI Companion",
+    "subtitle": "Intelligent Customer Engagement",
+    "url": "https://vgipl-website.vercel.app/products/conversational-ai-companion",
+    "summary": "Deploy advanced AI chatbots and virtual assistants to provide 24/7 support, drive sales, and enhance user engagement.",
+    "content": "Conversational AI Companion (Intelligent Customer Engagement). Deploy advanced AI chatbots and virtual assistants to provide 24/7 support, drive sales, and enhance user engagement. Key Features: Natural Language Processing: Understand and respond to complex user queries with human-like accuracy.. Omnichannel Deployment: Integrate the AI companion across your website, mobile app, and social media platforms.. Learning & Adaptation: The AI continuously learns from interactions to improve future responses. Metrics & Track Record: Conversations Handled: 50M+, Resolution Rate: 85%, Languages Supported: 40+, Uptime: 99%",
+    "features": [
+      {
+        "title": "Natural Language Processing",
+        "description": "Understand and respond to complex user queries with human-like accuracy."
+      },
+      {
+        "title": "Omnichannel Deployment",
+        "description": "Integrate the AI companion across your website, mobile app, and social media platforms."
+      },
+      {
+        "title": "Learning & Adaptation",
+        "description": "The AI continuously learns from interactions to improve future responses."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "50M+",
+        "label": "Conversations Handled"
+      },
+      {
+        "value": "85%",
+        "label": "Resolution Rate"
+      },
+      {
+        "value": "40+",
+        "label": "Languages Supported"
+      },
+      {
+        "value": "99%",
+        "label": "Uptime"
+      }
+    ],
+    "tags": [
+      "conversational",
+      "companion",
+      "intelligent",
+      "customer",
+      "engagement",
+      "conversational-ai-companion",
+      "product",
+      "natural",
+      "language",
+      "processing",
+      "omnichannel",
+      "deployment",
+      "learning",
+      "adaptation"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-transact-core",
+    "category": "product",
+    "slug": "transact-core",
+    "title": "Transaction Processing Platform",
+    "subtitle": "High-Volume Transaction Processing Engine",
+    "url": "https://vgipl-website.vercel.app/products/transact-core",
+    "summary": "A robust processing engine designed to handle massive volumes of transactions with ultra-low latency and perfect accuracy.",
+    "content": "Transaction Processing Platform (High-Volume Transaction Processing Engine). A robust processing engine designed to handle massive volumes of transactions with ultra-low latency and perfect accuracy. Key Features: High Throughput: Capable of processing thousands of transactions per second under peak loads.. ACID Compliance: Guarantees that all transactions are processed reliably, maintaining data integrity.. Fault Tolerance: Built-in redundancy ensures zero downtime even during hardware failures. Metrics & Track Record: TPS Capacity: 100k+, Reliability Score: 99.99%, End-to-End Latency: 15ms",
+    "features": [
+      {
+        "title": "High Throughput",
+        "description": "Capable of processing thousands of transactions per second under peak loads."
+      },
+      {
+        "title": "ACID Compliance",
+        "description": "Guarantees that all transactions are processed reliably, maintaining data integrity."
+      },
+      {
+        "title": "Fault Tolerance",
+        "description": "Built-in redundancy ensures zero downtime even during hardware failures."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "100k+",
+        "label": "TPS Capacity"
+      },
+      {
+        "value": "99.99%",
+        "label": "Reliability Score"
+      },
+      {
+        "value": "15ms",
+        "label": "End-to-End Latency"
+      }
+    ],
+    "tags": [
+      "transaction",
+      "processing",
+      "platform",
+      "high-volume",
+      "engine",
+      "transact-core",
+      "product",
+      "high",
+      "throughput",
+      "acid",
+      "compliance",
+      "fault",
+      "tolerance"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-audit-flux",
+    "category": "product",
+    "slug": "audit-flux",
+    "title": "Audit Management Platform",
+    "subtitle": "Dynamic Compliance and Auditing Software",
+    "url": "https://vgipl-website.vercel.app/products/audit-flux",
+    "summary": "Streamline your internal and external auditing processes with automated workflows, risk assessments, and compliance tracking.",
+    "content": "Audit Management Platform (Dynamic Compliance and Auditing Software). Streamline your internal and external auditing processes with automated workflows, risk assessments, and compliance tracking. Key Features: Automated Trails: Automatically log user actions and system changes to create reliable audit trails.. Risk Heatmaps: Visualize organizational risks to prioritize auditing efforts effectively.. Regulatory Updates: Stay current with automated updates reflecting the latest compliance frameworks. Metrics & Track Record: Audit Time Saved: 60%, Global Frameworks: 50+, Traceability: 100%",
+    "features": [
+      {
+        "title": "Automated Trails",
+        "description": "Automatically log user actions and system changes to create reliable audit trails."
+      },
+      {
+        "title": "Risk Heatmaps",
+        "description": "Visualize organizational risks to prioritize auditing efforts effectively."
+      },
+      {
+        "title": "Regulatory Updates",
+        "description": "Stay current with automated updates reflecting the latest compliance frameworks."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "60%",
+        "label": "Audit Time Saved"
+      },
+      {
+        "value": "50+",
+        "label": "Global Frameworks"
+      },
+      {
+        "value": "100%",
+        "label": "Traceability"
+      }
+    ],
+    "tags": [
+      "audit",
+      "management",
+      "platform",
+      "dynamic",
+      "compliance",
+      "auditing",
+      "software",
+      "audit-flux",
+      "product",
+      "automated",
+      "trails",
+      "risk",
+      "heatmaps",
+      "regulatory",
+      "updates"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-fin-flow",
+    "category": "product",
+    "slug": "fin-flow",
+    "title": "Enterprise Workflow Platform",
+    "subtitle": "Unified Digital Ecosystem for Banks & Businesses",
+    "url": "https://vgipl-website.vercel.app/products/fin-flow",
+    "summary": "Connect finance, HR, procurement, inventory, budgeting, and operational workflows on a unified platform designed to streamline business operations and deliver real-time visibility.",
+    "content": "Enterprise Workflow Platform (Unified Digital Ecosystem for Banks & Businesses). Connect finance, HR, procurement, inventory, budgeting, and operational workflows on a unified platform designed to streamline business operations and deliver real-time visibility. Key Features: Smart Routing: Automatically route financial documents to the correct stakeholders for approval.. Expense Tracking: Monitor budgets and expenditures in real-time to prevent overspending.. ERP Integration: Seamlessly sync financial data with your existing enterprise resource planning software. Metrics & Track Record: Invoices Processed: 2M+, Approval Speed Increase: 80%, Managed Budget: $10B+",
+    "features": [
+      {
+        "title": "Smart Routing",
+        "description": "Automatically route financial documents to the correct stakeholders for approval."
+      },
+      {
+        "title": "Expense Tracking",
+        "description": "Monitor budgets and expenditures in real-time to prevent overspending."
+      },
+      {
+        "title": "ERP Integration",
+        "description": "Seamlessly sync financial data with your existing enterprise resource planning software."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "2M+",
+        "label": "Invoices Processed"
+      },
+      {
+        "value": "80%",
+        "label": "Approval Speed Increase"
+      },
+      {
+        "value": "$10B+",
+        "label": "Managed Budget"
+      }
+    ],
+    "tags": [
+      "enterprise",
+      "workflow",
+      "platform",
+      "unified",
+      "digital",
+      "ecosystem",
+      "banks",
+      "businesses",
+      "fin-flow",
+      "product",
+      "smart",
+      "routing",
+      "expense",
+      "tracking",
+      "erp",
+      "integration"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-e-crm",
+    "category": "product",
+    "slug": "e-crm",
+    "title": "Customer Relationship Platform",
+    "subtitle": "Smarter Relationships. Stronger Conversions",
+    "url": "https://vgipl-website.vercel.app/products/e-crm",
+    "summary": "Build stronger customer relationships, manage leads and opportunities, and streamline customer interactions on a centralized platform designed for financial institutions and enterprises.",
+    "content": "Customer Relationship Platform (Smarter Relationships. Stronger Conversions). Build stronger customer relationships, manage leads and opportunities, and streamline customer interactions on a centralized platform designed for financial institutions and enterprises.",
+    "features": [],
+    "metrics": [],
+    "tags": [
+      "customer",
+      "relationship",
+      "platform",
+      "smarter",
+      "relationships",
+      "stronger",
+      "conversions",
+      "e-crm",
+      "product"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-e-los",
+    "category": "product",
+    "slug": "e-los",
+    "title": "Smart Digital Lending",
+    "subtitle": "Intelligent Loan Origination & Recommendation",
+    "url": "https://vgipl-website.vercel.app/products/e-los",
+    "summary": "Transform the lending journey with end-to-end digital loan processing, AI-driven applicant scoring, and smart loan recommendations based on customer profiles and risk factors.",
+    "content": "Smart Digital Lending (Intelligent Loan Origination & Recommendation). Transform the lending journey with end-to-end digital loan processing, AI-driven applicant scoring, and smart loan recommendations based on customer profiles and risk factors.",
+    "features": [],
+    "metrics": [],
+    "tags": [
+      "smart",
+      "digital",
+      "lending",
+      "intelligent",
+      "loan",
+      "origination",
+      "recommendation",
+      "e-los",
+      "product"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-secure-view-ai",
+    "category": "product",
+    "slug": "secure-view-ai",
+    "title": "Intelligent Video Surveillance",
+    "subtitle": "AI-Powered Video Analytics & Actionable Intelligence",
+    "url": "https://vgipl-website.vercel.app/products/secure-view-ai",
+    "summary": "Transform real-time camera streams into actionable intelligence with AI-powered video analytics, automated threat detection, real-time alerts, and intelligent surveillance.",
+    "content": "Intelligent Video Surveillance (AI-Powered Video Analytics & Actionable Intelligence). Transform real-time camera streams into actionable intelligence with AI-powered video analytics, automated threat detection, real-time alerts, and intelligent surveillance.",
+    "features": [],
+    "metrics": [],
+    "tags": [
+      "intelligent",
+      "video",
+      "surveillance",
+      "ai-powered",
+      "analytics",
+      "actionable",
+      "intelligence",
+      "secure-view-ai",
+      "product"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-digital-identity-verification-platform",
+    "category": "product",
+    "slug": "digital-identity-verification-platform",
+    "title": "Digital Identity Verification",
+    "subtitle": "Secure, Seamless & Compliant Digital Onboarding",
+    "url": "https://vgipl-website.vercel.app/products/digital-identity-verification-platform",
+    "summary": "Enable faster, safer, and paperless customer onboarding with end-to-end digital KYC, real-time identity verification, secure API integrations, and compliance-ready verification services.",
+    "content": "Digital Identity Verification (Secure, Seamless & Compliant Digital Onboarding). Enable faster, safer, and paperless customer onboarding with end-to-end digital KYC, real-time identity verification, secure API integrations, and compliance-ready verification services.",
+    "features": [],
+    "metrics": [],
+    "tags": [
+      "digital",
+      "identity",
+      "verification",
+      "secure",
+      "seamless",
+      "compliant",
+      "onboarding",
+      "digital-identity-verification-platform",
+      "product"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-infrastructure-and-intelligence",
+    "category": "product",
+    "slug": "infrastructure-and-intelligence",
+    "title": "Infrastructure Intelligence",
+    "subtitle": "Smarter Roads. Safer Cities",
+    "url": "https://vgipl-website.vercel.app/products/infrastructure-and-intelligence",
+    "summary": "AI-powered infrastructure monitoring for real-time monitoring, predictive maintenance, automated audits, and intelligent incident management.",
+    "content": "Infrastructure Intelligence (Smarter Roads. Safer Cities). AI-powered infrastructure monitoring for real-time monitoring, predictive maintenance, automated audits, and intelligent incident management.",
+    "features": [],
+    "metrics": [],
+    "tags": [
+      "infrastructure",
+      "intelligence",
+      "smarter",
+      "roads",
+      "safer",
+      "cities",
+      "infrastructure-and-intelligence",
+      "product"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "PROD-v-connect",
+    "category": "product",
+    "slug": "v-connect",
+    "title": "Virtual Private Network Solution",
+    "subtitle": "Smart, Secure & Scalable Connectivity",
+    "url": "https://vgipl-website.vercel.app/products/v-connect",
+    "summary": "Smart hybrid network connectivity with reliable performance, intelligent failover, secure communication, and scalable multi-branch connectivity.",
+    "content": "Virtual Private Network Solution (Smart, Secure & Scalable Connectivity). Smart hybrid network connectivity with reliable performance, intelligent failover, secure communication, and scalable multi-branch connectivity.",
+    "features": [],
+    "metrics": [],
+    "tags": [
+      "virtual",
+      "private",
+      "network",
+      "solution",
+      "smart",
+      "secure",
+      "scalable",
+      "connectivity",
+      "v-connect",
+      "product"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "SERV-application-development",
+    "category": "service",
+    "slug": "application-development",
+    "title": "Application Development",
+    "subtitle": "Custom Software Solutions for Modern Enterprises",
+    "url": "https://vgipl-website.vercel.app/services/application-development",
+    "summary": "We build robust, scalable, and user-centric applications tailored to your specific business needs, ensuring high performance and seamless integration.",
+    "content": "Application Development (Custom Software Solutions for Modern Enterprises). We build robust, scalable, and user-centric applications tailored to your specific business needs, ensuring high performance and seamless integration. Our application development services cover the entire lifecycle, from ideation and design to development, testing, and deployment. We leverage the latest technologies to build applications that are not only functional but also intuitive and engaging. Whether you need a simple web portal or a complex enterprise system, our team has the expertise to deliver high-quality results. Core Capabilities: Custom Web Apps: Tailored web solutions using modern frameworks.. Enterprise Software: Scalable systems for complex business processes.. API Integration: Connecting your apps with third-party services. Service Metrics: Apps Delivered: 500+, SLA Reliability: 99.9%, Support & Maintenance: 24/7",
+    "features": [
+      {
+        "title": "Custom Web Apps",
+        "description": "Tailored web solutions using modern frameworks."
+      },
+      {
+        "title": "Enterprise Software",
+        "description": "Scalable systems for complex business processes."
+      },
+      {
+        "title": "API Integration",
+        "description": "Connecting your apps with third-party services."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "500+",
+        "label": "Apps Delivered"
+      },
+      {
+        "value": "99.9%",
+        "label": "SLA Reliability"
+      },
+      {
+        "value": "24/7",
+        "label": "Support & Maintenance"
+      }
+    ],
+    "tags": [
+      "application",
+      "development",
+      "custom",
+      "software",
+      "solutions",
+      "modern",
+      "enterprises",
+      "application-development",
+      "service",
+      "web",
+      "apps",
+      "enterprise",
+      "api",
+      "integration"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "SERV-it-infrastructure-development",
+    "category": "service",
+    "slug": "it-infrastructure-development",
+    "title": "IT Infrastructure Development",
+    "subtitle": "Building the Foundation for Digital Success",
+    "url": "https://vgipl-website.vercel.app/services/it-infrastructure-development",
+    "summary": "Design and implement robust IT infrastructures that provide a secure and scalable foundation for your digital operations.",
+    "content": "IT Infrastructure Development (Building the Foundation for Digital Success). Design and implement robust IT infrastructures that provide a secure and scalable foundation for your digital operations. A strong IT infrastructure is the backbone of any modern business. We provide end-to-end infrastructure development services, including network design, server implementation, cloud integration, and security management. Our goal is to create an environment that is not only reliable and secure but also flexible enough to adapt to your changing business needs. Core Capabilities: Network Design: Optimized network architectures for maximum speed.. Server Solutions: Reliable and scalable server infrastructure.. Cloud Integration: Seamless migration and management of cloud services. Service Metrics: Nodes Managed: 1000+, Uptime: 99.99%, Security Breaches: Zero",
+    "features": [
+      {
+        "title": "Network Design",
+        "description": "Optimized network architectures for maximum speed."
+      },
+      {
+        "title": "Server Solutions",
+        "description": "Reliable and scalable server infrastructure."
+      },
+      {
+        "title": "Cloud Integration",
+        "description": "Seamless migration and management of cloud services."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "1000+",
+        "label": "Nodes Managed"
+      },
+      {
+        "value": "99.99%",
+        "label": "Uptime"
+      },
+      {
+        "value": "Zero",
+        "label": "Security Breaches"
+      }
+    ],
+    "tags": [
+      "infrastructure",
+      "development",
+      "building",
+      "foundation",
+      "digital",
+      "success",
+      "it-infrastructure-development",
+      "service",
+      "network",
+      "design",
+      "server",
+      "solutions",
+      "cloud",
+      "integration"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "SERV-vgst",
+    "category": "service",
+    "slug": "vgst",
+    "title": "VGST",
+    "subtitle": "Virtual Galaxy Smart Technology",
+    "url": "https://vgipl-website.vercel.app/services/vgst",
+    "summary": "Advanced smart technology solutions for connected ecosystems, smart cities, and IoT-driven innovation.",
+    "content": "VGST (Virtual Galaxy Smart Technology). Advanced smart technology solutions for connected ecosystems, smart cities, and IoT-driven innovation. VGST (Virtual Galaxy Smart Technology) represents our commitment to the future of connected living. We develop and implement smart solutions that leverage IoT, AI, and big data to improve efficiency, sustainability, and quality of life. From smart lighting and waste management to intelligent transportation and public safety, our VGST solutions are at the forefront of urban innovation. Core Capabilities: Smart City Solutions: Intelligent systems for urban management.. IoT Integration: Connecting devices for data-driven insights.. Connected Ecosystems: Unified platforms for seamless interaction. Service Metrics: Smart Projects: 50+, Connected Devices: 1M+, Efficiency Gain: 30%",
+    "features": [
+      {
+        "title": "Smart City Solutions",
+        "description": "Intelligent systems for urban management."
+      },
+      {
+        "title": "IoT Integration",
+        "description": "Connecting devices for data-driven insights."
+      },
+      {
+        "title": "Connected Ecosystems",
+        "description": "Unified platforms for seamless interaction."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "50+",
+        "label": "Smart Projects"
+      },
+      {
+        "value": "1M+",
+        "label": "Connected Devices"
+      },
+      {
+        "value": "30%",
+        "label": "Efficiency Gain"
+      }
+    ],
+    "tags": [
+      "vgst",
+      "virtual",
+      "galaxy",
+      "smart",
+      "technology",
+      "service",
+      "city",
+      "solutions",
+      "iot",
+      "integration",
+      "connected",
+      "ecosystems"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "SERV-mobile-computing",
+    "category": "service",
+    "slug": "mobile-computing",
+    "title": "Mobile Computing",
+    "subtitle": "Seamless Experiences on Every Device",
+    "url": "https://vgipl-website.vercel.app/services/mobile-computing",
+    "summary": "Develop high-performance mobile applications and solutions that provide a superior user experience across iOS and Android.",
+    "content": "Mobile Computing (Seamless Experiences on Every Device). Develop high-performance mobile applications and solutions that provide a superior user experience across iOS and Android. In today's mobile-first world, having a strong mobile presence is essential. Our mobile computing services help you reach your customers wherever they are. We specialize in creating high-quality native and cross-platform apps that are fast, secure, and easy to use. Whether you're looking to build a consumer app or an enterprise mobile tool, we have the skills to make it a success. Core Capabilities: Native App Dev: High-performance apps for iOS and Android.. Cross-Platform: Efficient solutions for multiple platforms.. Mobile UX/UI: Intuitive designs for smaller screens. Service Metrics: Mobile Apps: 200+, Avg Store Rating: 4.8/5, App Installs: 10M+",
+    "features": [
+      {
+        "title": "Native App Dev",
+        "description": "High-performance apps for iOS and Android."
+      },
+      {
+        "title": "Cross-Platform",
+        "description": "Efficient solutions for multiple platforms."
+      },
+      {
+        "title": "Mobile UX/UI",
+        "description": "Intuitive designs for smaller screens."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "200+",
+        "label": "Mobile Apps"
+      },
+      {
+        "value": "4.8/5",
+        "label": "Avg Store Rating"
+      },
+      {
+        "value": "10M+",
+        "label": "App Installs"
+      }
+    ],
+    "tags": [
+      "mobile",
+      "computing",
+      "seamless",
+      "experiences",
+      "every",
+      "device",
+      "mobile-computing",
+      "service",
+      "native",
+      "app",
+      "dev",
+      "cross-platform"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "SERV-dc-dr",
+    "category": "service",
+    "slug": "dc-dr",
+    "title": "DC & DR",
+    "subtitle": "Disaster Recovery & Data Center Solutions",
+    "url": "https://vgipl-website.vercel.app/services/dc-dr",
+    "summary": "Ensure business continuity and secure data management with our comprehensive DR and DC services.",
+    "content": "DC & DR (Disaster Recovery & Data Center Solutions). Ensure business continuity and secure data management with our comprehensive DR and DC services. Protecting your data and ensuring business continuity are critical in the digital age. Our Disaster Recovery and Data Center services provide you with the peace of mind that your operations will remain functional even in the face of unexpected events. We design and manage state-of-the-art data centers and implement robust recovery protocols to minimize downtime and prevent data loss. Core Capabilities: Data Center Mgmt: Secure and efficient data storage solutions.. Disaster Recovery: Robust plans for business continuity.. Cloud Backup: Automatic and secure off-site data backups. Service Metrics: Data Managed: PB+, Data Loss Incidents: 0, Recovery Time Obj.: <4h",
+    "features": [
+      {
+        "title": "Data Center Mgmt",
+        "description": "Secure and efficient data storage solutions."
+      },
+      {
+        "title": "Disaster Recovery",
+        "description": "Robust plans for business continuity."
+      },
+      {
+        "title": "Cloud Backup",
+        "description": "Automatic and secure off-site data backups."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "PB+",
+        "label": "Data Managed"
+      },
+      {
+        "value": "0",
+        "label": "Data Loss Incidents"
+      },
+      {
+        "value": "<4h",
+        "label": "Recovery Time Obj."
+      }
+    ],
+    "tags": [
+      "disaster",
+      "recovery",
+      "data",
+      "center",
+      "solutions",
+      "dc-dr",
+      "service",
+      "mgmt",
+      "cloud",
+      "backup"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "SERV-digital-solutions",
+    "category": "service",
+    "slug": "digital-solutions",
+    "title": "Digital Solutions",
+    "subtitle": "Strategic Tools for Digital Transformation",
+    "url": "https://vgipl-website.vercel.app/services/digital-solutions",
+    "summary": "Optimize your business operations and enhance customer engagement with our suite of strategic digital solutions.",
+    "content": "Digital Solutions (Strategic Tools for Digital Transformation). Optimize your business operations and enhance customer engagement with our suite of strategic digital solutions. Our digital solutions are designed to help you thrive in the digital economy. We work with you to develop and implement strategies that improve efficiency, enhance customer experience, and drive growth. From e-commerce platforms and CRM systems to custom business automation tools, we provide the digital tools you need to succeed. Core Capabilities: Digital Strategy: Comprehensive roadmaps for digital success.. CRM/ERP: Customized management systems for better efficiency.. E-commerce: Robust platforms for online sales and growth. Service Metrics: Digital Projects: 300+, Revenue Growth: 40%, Cost Reduction: 25%",
+    "features": [
+      {
+        "title": "Digital Strategy",
+        "description": "Comprehensive roadmaps for digital success."
+      },
+      {
+        "title": "CRM/ERP",
+        "description": "Customized management systems for better efficiency."
+      },
+      {
+        "title": "E-commerce",
+        "description": "Robust platforms for online sales and growth."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "300+",
+        "label": "Digital Projects"
+      },
+      {
+        "value": "40%",
+        "label": "Revenue Growth"
+      },
+      {
+        "value": "25%",
+        "label": "Cost Reduction"
+      }
+    ],
+    "tags": [
+      "digital",
+      "solutions",
+      "strategic",
+      "tools",
+      "transformation",
+      "digital-solutions",
+      "service",
+      "strategy",
+      "crm",
+      "erp",
+      "e-commerce"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "SERV-ai-ml",
+    "category": "service",
+    "slug": "ai-ml",
+    "title": "AI & ML",
+    "subtitle": "Harnessing the Power of Intelligence",
+    "url": "https://vgipl-website.vercel.app/services/ai-ml",
+    "summary": "Drive innovation and gain predictive insights with our advanced Artificial Intelligence and Machine Learning solutions.",
+    "content": "AI & ML (Harnessing the Power of Intelligence). Drive innovation and gain predictive insights with our advanced Artificial Intelligence and Machine Learning solutions. Artificial Intelligence and Machine Learning are transforming how businesses operate. Our AI & ML services help you unlock the value in your data and build intelligent systems that learn and adapt. Whether you're looking to automate complex processes, predict customer behavior, or gain new insights from visual data, our team of experts can help you achieve your goals. Core Capabilities: Predictive Analytics: Forecasting trends and behaviors with data.. NLP Solutions: Intelligent processing of human language.. Computer Vision: Visual data interpretation and analysis. Service Metrics: AI Models: 100+, Prediction Accuracy: 90%, Automated Tasks: 50%",
+    "features": [
+      {
+        "title": "Predictive Analytics",
+        "description": "Forecasting trends and behaviors with data."
+      },
+      {
+        "title": "NLP Solutions",
+        "description": "Intelligent processing of human language."
+      },
+      {
+        "title": "Computer Vision",
+        "description": "Visual data interpretation and analysis."
+      }
+    ],
+    "metrics": [
+      {
+        "value": "100+",
+        "label": "AI Models"
+      },
+      {
+        "value": "90%",
+        "label": "Prediction Accuracy"
+      },
+      {
+        "value": "50%",
+        "label": "Automated Tasks"
+      }
+    ],
+    "tags": [
+      "harnessing",
+      "power",
+      "intelligence",
+      "ai-ml",
+      "service",
+      "predictive",
+      "analytics",
+      "nlp",
+      "solutions",
+      "computer",
+      "vision"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-board-and-management",
+    "category": "investor",
+    "slug": "board-and-management",
+    "title": "Board and Management",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/board-and-management",
+    "summary": "Meet our leadership team dedicated to guiding Virtual Galaxy towards innovation, sustainable growth, and long-term success.",
+    "content": "Board and Management. Meet our leadership team dedicated to guiding Virtual Galaxy towards innovation, sustainable growth, and long-term success. Components & Sections: Board of Directors, Committees, Key Managerial Personnel, Advisors.",
+    "tags": [
+      "board",
+      "management",
+      "board-and-management",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-group-companies",
+    "category": "investor",
+    "slug": "group-companies",
+    "title": "Group Companies",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/group-companies",
+    "summary": "Information about our group companies and subsidiaries working synergistically across various sectors.",
+    "content": "Group Companies. Information about our group companies and subsidiaries working synergistically across various sectors.",
+    "tags": [
+      "group",
+      "companies",
+      "group-companies",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-financial-information-reports",
+    "category": "investor",
+    "slug": "financial-information-reports",
+    "title": "Financial Information & Statutory Reports",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/financial-information-reports",
+    "summary": "Review our financial performance, quarterly results, and statutory reports.",
+    "content": "Financial Information & Statutory Reports. Review our financial performance, quarterly results, and statutory reports.",
+    "tags": [
+      "financial",
+      "information",
+      "statutory",
+      "reports",
+      "financial-information-reports",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-corporate-governance",
+    "category": "investor",
+    "slug": "corporate-governance",
+    "title": "Corporate Governance",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/corporate-governance",
+    "summary": "Our commitment to ethical business practices, transparency, and accountability.",
+    "content": "Corporate Governance. Our commitment to ethical business practices, transparency, and accountability.",
+    "tags": [
+      "corporate",
+      "governance",
+      "corporate-governance",
+      "investor",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-investor-contacts-grievances",
+    "category": "investor",
+    "slug": "investor-contacts-grievances",
+    "title": "Investor Contacts/Grievances",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/investor-contacts-grievances",
+    "summary": "Get in touch with our investor relations team or submit any grievances for prompt resolution.",
+    "content": "Investor Contacts/Grievances. Get in touch with our investor relations team or submit any grievances for prompt resolution.",
+    "tags": [
+      "investor",
+      "contacts",
+      "grievances",
+      "investor-contacts-grievances",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-material-creditors",
+    "category": "investor",
+    "slug": "material-creditors",
+    "title": "Material Creditors",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/material-creditors",
+    "summary": "Details regarding our material creditors and outstanding financial obligations.",
+    "content": "Material Creditors. Details regarding our material creditors and outstanding financial obligations.",
+    "tags": [
+      "material",
+      "creditors",
+      "material-creditors",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-preferential-allotment-warrants",
+    "category": "investor",
+    "slug": "preferential-allotment-warrants",
+    "title": "Preferential Allotment of Warrants",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/preferential-allotment-warrants",
+    "summary": "Information on the preferential allotment of warrants and related disclosures.",
+    "content": "Preferential Allotment of Warrants. Information on the preferential allotment of warrants and related disclosures.",
+    "tags": [
+      "preferential",
+      "allotment",
+      "warrants",
+      "preferential-allotment-warrants",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-material-contracts",
+    "category": "investor",
+    "slug": "material-contracts",
+    "title": "Material Contracts",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/material-contracts",
+    "summary": "Key material contracts that govern our strategic partnerships and business operations.",
+    "content": "Material Contracts. Key material contracts that govern our strategic partnerships and business operations.",
+    "tags": [
+      "material",
+      "contracts",
+      "material-contracts",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-material-documents",
+    "category": "investor",
+    "slug": "material-documents",
+    "title": "Material Documents",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/material-documents",
+    "summary": "Important material documents available for investor review and compliance.",
+    "content": "Material Documents. Important material documents available for investor review and compliance.",
+    "tags": [
+      "material",
+      "documents",
+      "material-documents",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-investor-analyst-meet",
+    "category": "investor",
+    "slug": "investor-analyst-meet",
+    "title": "Investor Analyst Meet",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/investor-analyst-meet",
+    "summary": "Presentations, transcripts, and schedules for our investor and analyst meetings.",
+    "content": "Investor Analyst Meet. Presentations, transcripts, and schedules for our investor and analyst meetings.",
+    "tags": [
+      "investor",
+      "analyst",
+      "meet",
+      "investor-analyst-meet",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-annual-reports",
+    "category": "investor",
+    "slug": "annual-reports",
+    "title": "Annual Reports",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/annual-reports",
+    "summary": "Comprehensive annual reports detailing our financial health, achievements, and strategic outlook.",
+    "content": "Annual Reports. Comprehensive annual reports detailing our financial health, achievements, and strategic outlook.",
+    "tags": [
+      "annual",
+      "reports",
+      "annual-reports",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-notice-of-meetings",
+    "category": "investor",
+    "slug": "notice-of-meetings",
+    "title": "Notice of Meetings",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/notice-of-meetings",
+    "summary": "Official notices for Annual General Meetings (AGMs) and Extraordinary General Meetings (EGMs).",
+    "content": "Notice of Meetings. Official notices for Annual General Meetings (AGMs) and Extraordinary General Meetings (EGMs).",
+    "tags": [
+      "notice",
+      "meetings",
+      "notice-of-meetings",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-dividend",
+    "category": "investor",
+    "slug": "dividend",
+    "title": "Dividend",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/dividend",
+    "summary": "Information regarding our dividend policy, declarations, and historical payouts.",
+    "content": "Dividend. Information regarding our dividend policy, declarations, and historical payouts.",
+    "tags": [
+      "dividend",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "INV-announcement",
+    "category": "investor",
+    "slug": "announcement",
+    "title": "Announcement",
+    "subtitle": "Investor Relations & Corporate Governance",
+    "url": "https://vgipl-website.vercel.app/investors/announcement",
+    "summary": "Latest corporate announcements, press releases, and regulatory filings.",
+    "content": "Announcement. Latest corporate announcements, press releases, and regulatory filings.",
+    "tags": [
+      "announcement",
+      "investor",
+      "governance",
+      "nse"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1CYm23cUnE-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1CYm23cUnE-",
+    "title": "Virtual Galaxy Infotech Secures $1.1 Million Global Contract",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1CYm23cUnE/",
+    "summary": "Virtual Galaxy Infotech Secures $1.1 Million Global Contract",
+    "content": "Virtual Galaxy Infotech Secures $1.1 Million Global Contract.",
+    "tags": [
+      "virtual",
+      "galaxy",
+      "infotech",
+      "secures",
+      "million",
+      "global",
+      "contract",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1EKWRWMY27-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1EKWRWMY27-",
+    "title": "Shivkrupa Sahakari Pathpedhi Limited goes digital with VGIL's advanced CBS E-Banker",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1EKWRWMY27/",
+    "summary": "Shivkrupa Sahakari Pathpedhi Limited goes digital with VGIL's advanced CBS E-Banker",
+    "content": "Shivkrupa Sahakari Pathpedhi Limited goes digital with VGIL's advanced CBS E-Banker.",
+    "tags": [
+      "shivkrupa",
+      "sahakari",
+      "pathpedhi",
+      "limited",
+      "goes",
+      "digital",
+      "vgil",
+      "advanced",
+      "cbs",
+      "e-banker",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1G3cMLNYzL-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1G3cMLNYzL-",
+    "title": "Virtual Galaxy Infotech Secures Landmark International Mandate with Botswana Development Corporation",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1G3cMLNYzL/",
+    "summary": "Virtual Galaxy Infotech Secures Landmark International Mandate with Botswana Development Corporation",
+    "content": "Virtual Galaxy Infotech Secures Landmark International Mandate with Botswana Development Corporation.",
+    "tags": [
+      "virtual",
+      "galaxy",
+      "infotech",
+      "secures",
+      "landmark",
+      "international",
+      "mandate",
+      "botswana",
+      "development",
+      "corporation",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-18euGLYTA8-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-18euGLYTA8-",
+    "title": "Honored to host Canadian Consulate dignitaries at Virtual Galaxy Infotech's MIHAN SEZ Development Centre!",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/18euGLYTA8/",
+    "summary": "Honored to host Canadian Consulate dignitaries at Virtual Galaxy Infotech's MIHAN SEZ Development Centre!",
+    "content": "Honored to host Canadian Consulate dignitaries at Virtual Galaxy Infotech's MIHAN SEZ Development Centre!.",
+    "tags": [
+      "honored",
+      "host",
+      "canadian",
+      "consulate",
+      "dignitaries",
+      "virtual",
+      "galaxy",
+      "infotech",
+      "mihan",
+      "sez",
+      "development",
+      "centre",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-18g8W9MjGP-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-18g8W9MjGP-",
+    "title": "Honored to attend the Defence Expo in the Philippines and engage in collaborations between India and the Philippines",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/18g8W9MjGP/",
+    "summary": "Honored to attend the Defence Expo in the Philippines and engage in collaborations between India and the Philippines",
+    "content": "Honored to attend the Defence Expo in the Philippines and engage in collaborations between India and the Philippines.",
+    "tags": [
+      "honored",
+      "attend",
+      "defence",
+      "expo",
+      "philippines",
+      "engage",
+      "collaborations",
+      "between",
+      "india",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1ENUXtyiZ1-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1ENUXtyiZ1-",
+    "title": "India–Kenya 3rd DefExpo | Nairobi, Kenya. Interacting with Hon. Soipan Tuya, Defence Minister of Kenya",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1ENUXtyiZ1/",
+    "summary": "India–Kenya 3rd DefExpo | Nairobi, Kenya. Interacting with Hon. Soipan Tuya, Defence Minister of Kenya",
+    "content": "India–Kenya 3rd DefExpo | Nairobi, Kenya. Interacting with Hon. Soipan Tuya, Defence Minister of Kenya.",
+    "tags": [
+      "india",
+      "kenya",
+      "3rd",
+      "defexpo",
+      "nairobi",
+      "interacting",
+      "hon",
+      "soipan",
+      "tuya",
+      "defence",
+      "minister",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-watch-?v=999139971989370",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-watch-?v=999139971989370",
+    "title": "Virtual Galaxy Infotech’s ₹93.29 Cr IPO attracted an astounding ₹14,440 Cr in bids",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/watch/?v=999139971989370",
+    "summary": "Virtual Galaxy Infotech’s ₹93.29 Cr IPO attracted an astounding ₹14,440 Cr in bids",
+    "content": "Virtual Galaxy Infotech’s ₹93.29 Cr IPO attracted an astounding ₹14,440 Cr in bids.",
+    "tags": [
+      "virtual",
+      "galaxy",
+      "infotech",
+      "ipo",
+      "attracted",
+      "astounding",
+      "440",
+      "bids",
+      "news",
+      "resource",
+      "video"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-18axFmzTNX-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-18axFmzTNX-",
+    "title": "A proud moment for Virtual Galaxy Infotech Ltd. – officially listed on NSE India!",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/18axFmzTNX/",
+    "summary": "A proud moment for Virtual Galaxy Infotech Ltd. – officially listed on NSE India!",
+    "content": "A proud moment for Virtual Galaxy Infotech Ltd. – officially listed on NSE India!.",
+    "tags": [
+      "proud",
+      "moment",
+      "virtual",
+      "galaxy",
+      "infotech",
+      "ltd",
+      "officially",
+      "listed",
+      "nse",
+      "india",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1XL7HrEVfp-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1XL7HrEVfp-",
+    "title": "All Indian Urban Coop Banking Summit! A powerful gathering of visionaries, leaders, and changemakers",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1XL7HrEVfp/",
+    "summary": "All Indian Urban Coop Banking Summit! A powerful gathering of visionaries, leaders, and changemakers",
+    "content": "All Indian Urban Coop Banking Summit! A powerful gathering of visionaries, leaders, and changemakers.",
+    "tags": [
+      "indian",
+      "urban",
+      "coop",
+      "banking",
+      "summit",
+      "powerful",
+      "gathering",
+      "visionaries",
+      "leaders",
+      "changemakers",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1BjyahHDMH-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1BjyahHDMH-",
+    "title": "Virtual Galaxy is honored to be recognized as the Leading IT Solutions Provider of the Year by the prestigious Sardar Patel Unity Awards",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1BjyahHDMH/",
+    "summary": "Virtual Galaxy is honored to be recognized as the Leading IT Solutions Provider of the Year by the prestigious Sardar Patel Unity Awards",
+    "content": "Virtual Galaxy is honored to be recognized as the Leading IT Solutions Provider of the Year by the prestigious Sardar Patel Unity Awards.",
+    "tags": [
+      "virtual",
+      "galaxy",
+      "honored",
+      "recognized",
+      "leading",
+      "solutions",
+      "provider",
+      "year",
+      "prestigious",
+      "sardar",
+      "patel",
+      "unity",
+      "awards",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-18WMGgstqA-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-18WMGgstqA-",
+    "title": "ZENITH 2025 – Investor & Analyst Meet by Virtual Galaxy Infotech Ltd. is set to redefine the future of digital finance",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/18WMGgstqA/",
+    "summary": "ZENITH 2025 – Investor & Analyst Meet by Virtual Galaxy Infotech Ltd. is set to redefine the future of digital finance",
+    "content": "ZENITH 2025 – Investor & Analyst Meet by Virtual Galaxy Infotech Ltd. is set to redefine the future of digital finance.",
+    "tags": [
+      "zenith",
+      "2025",
+      "investor",
+      "analyst",
+      "meet",
+      "virtual",
+      "galaxy",
+      "infotech",
+      "ltd",
+      "set",
+      "redefine",
+      "future",
+      "digital",
+      "finance",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1BV34fxvMU-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1BV34fxvMU-",
+    "title": "Virtual Galaxy Infotech Ltd. featured in CIOLook India! Recognizing Mr. Avinash Shende and Mr. Sachin Pande as Top Iconic Business Leaders to Watch in 2024",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1BV34fxvMU/",
+    "summary": "Virtual Galaxy Infotech Ltd. featured in CIOLook India! Recognizing Mr. Avinash Shende and Mr. Sachin Pande as Top Iconic Business Leaders to Watch in 2024",
+    "content": "Virtual Galaxy Infotech Ltd. featured in CIOLook India! Recognizing Mr. Avinash Shende and Mr. Sachin Pande as Top Iconic Business Leaders to Watch in 2024.",
+    "tags": [
+      "virtual",
+      "galaxy",
+      "infotech",
+      "ltd",
+      "featured",
+      "ciolook",
+      "india",
+      "recognizing",
+      "avinash",
+      "shende",
+      "sachin",
+      "pande",
+      "top",
+      "iconic",
+      "business",
+      "leaders",
+      "watch",
+      "2024",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.facebook.com-share-p-1BC4Ma7YSm-",
+    "category": "resource",
+    "slug": "https:--www.facebook.com-share-p-1BC4Ma7YSm-",
+    "title": "Virtual Galaxy Infotech Ltd. (VGIL) featured in Business India - The Magazine of the Corporate World!",
+    "subtitle": "News",
+    "url": "https://www.facebook.com/share/p/1BC4Ma7YSm/",
+    "summary": "Virtual Galaxy Infotech Ltd. (VGIL) featured in Business India - The Magazine of the Corporate World!",
+    "content": "Virtual Galaxy Infotech Ltd. (VGIL) featured in Business India - The Magazine of the Corporate World!.",
+    "tags": [
+      "virtual",
+      "galaxy",
+      "infotech",
+      "ltd",
+      "vgil",
+      "featured",
+      "business",
+      "india",
+      "magazine",
+      "corporate",
+      "world",
+      "news",
+      "resource",
+      "photo"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-erp-what-is",
+    "category": "resource",
+    "slug": "erp-what-is",
+    "title": "What is Enterprise Resource Planning and its Importance?",
+    "subtitle": "Blog",
+    "url": "https://vgipl-website.vercel.app/blog/erp-what-is",
+    "summary": "It has been measured that businesses and industries are turning more and more towards installing an ERP system. It is proving a beneficial decision for any organization as it becomes easier to manage the various aspects of the working field with ease.",
+    "content": "What is Enterprise Resource Planning and its Importance?. It has been measured that businesses and industries are turning more and more towards installing an ERP system. It is proving a beneficial decision for any organization as it becomes easier to manage the various aspects of the working field with ease. ERP system is an integrated system that manages various aspects of business, saves cost and time. It allows any type of business to keep track of different sections such as human resources, production and stock keeping, financial management, supply chain management, etc. It is a central hub for an end to end workflow and data. It collects an organization's shared data from multiple sources and eliminates data duplication. In today's advanced technology, such systems are considered essential for managing businesses of all sizes and in all industries.",
+    "tags": [
+      "what",
+      "enterprise",
+      "resource",
+      "planning",
+      "importance",
+      "blog"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-erp-advantages",
+    "category": "resource",
+    "slug": "erp-advantages",
+    "title": "Top 5 Advantages of Implementing an ERP System",
+    "subtitle": "Blog",
+    "url": "https://vgipl-website.vercel.app/blog/erp-advantages",
+    "summary": "Implementing an ERP system offers numerous benefits that can transform how your business operates, from improved efficiency to better data-driven insights.",
+    "content": "Top 5 Advantages of Implementing an ERP System. Implementing an ERP system offers numerous benefits that can transform how your business operates, from improved efficiency to better data-driven insights. 1. Improved Efficiency: \"Streamline\" operations and automate repetitive tasks. 2. Real-time Data: \"Access\" accurate information across all departments instantaneously. 3. Better Collaboration: \"Break\" down silos and improve communication between teams. 4. Scalability: \"Easily\" adapt the system as your business grows. 5. Cost Savings: \"Reduce\" operational costs through better resource management.",
+    "tags": [
+      "top",
+      "advantages",
+      "implementing",
+      "erp",
+      "system",
+      "blog",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-vpn-what-is",
+    "category": "resource",
+    "slug": "vpn-what-is",
+    "title": "What is a Virtual Private Network?",
+    "subtitle": "Blog",
+    "url": "https://vgipl-website.vercel.app/blog/vpn-what-is",
+    "summary": "In an era of increasing digital threats, understanding how a VPN protects your corporate data is more critical than ever.",
+    "content": "What is a Virtual Private Network?. In an era of increasing digital threats, understanding how a VPN protects your corporate data is more critical than ever. A Virtual Private Network (VPN) creates a secure, encrypted connection between your device and the internet. For businesses, this means employees can securely access corporate servers from any location without risking data leaks or unauthorized access. It acts as a secure tunnel for your digital communications.",
+    "tags": [
+      "what",
+      "virtual",
+      "private",
+      "network",
+      "blog",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-cbs-for-banks",
+    "category": "resource",
+    "slug": "cbs-for-banks",
+    "title": "What Is Core Banking Solution For Banks?",
+    "subtitle": "Blog",
+    "url": "https://vgipl-website.vercel.app/blog/cbs-for-banks",
+    "summary": "Core Banking Solutions (CBS) are the heart of modern financial institutions, enabling seamless transactions and centralized management.",
+    "content": "What Is Core Banking Solution For Banks?. Core Banking Solutions (CBS) are the heart of modern financial institutions, enabling seamless transactions and centralized management. CBS allows banks to centralize their operations, providing a single view of the customer across all branches. This leads to faster transaction processing, improved customer service, and better compliance with financial regulations. It is the technological backbone that powers modern day banking.",
+    "tags": [
+      "what",
+      "core",
+      "banking",
+      "solution",
+      "banks",
+      "blog",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-ai-banking-reshape",
+    "category": "resource",
+    "slug": "ai-banking-reshape",
+    "title": "How AI-Based Banking is Reshaping the Core Banking Landscape",
+    "subtitle": "Blog",
+    "url": "https://vgipl-website.vercel.app/blog/ai-banking-reshape",
+    "summary": "Artificial Intelligence is no longer just a buzzword; it is actively transforming how banks interact with customers and manage risk.",
+    "content": "How AI-Based Banking is Reshaping the Core Banking Landscape. Artificial Intelligence is no longer just a buzzword; it is actively transforming how banks interact with customers and manage risk. From AI-powered chatbots to advanced fraud detection algorithms, AI is making banking more personalized and secure. It helps institutions analyze vast amounts of data to predict market trends and offer tailored financial products to their customers, reshaping the entire landscape of financial services.",
+    "tags": [
+      "how",
+      "ai-based",
+      "banking",
+      "reshaping",
+      "core",
+      "landscape",
+      "blog",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-banking-security-platform",
+    "category": "resource",
+    "slug": "banking-security-platform",
+    "title": "Strengthening Banking Security with a Centralized Cybersecurity Management Platform",
+    "subtitle": "Blog",
+    "url": "https://vgipl-website.vercel.app/blog/banking-security-platform",
+    "summary": "A centralized approach to cybersecurity is the only way to stay ahead of sophisticated modern financial threats.",
+    "content": "Strengthening Banking Security with a Centralized Cybersecurity Management Platform. A centralized approach to cybersecurity is the only way to stay ahead of sophisticated modern financial threats. Centralized cybersecurity platforms provide a unified view of all potential threats across the banking network. By integrating various security protocols into a single management interface, banks can respond faster to incidents and ensure that every layer of their digital infrastructure is protected against evolving cyber threats.",
+    "tags": [
+      "strengthening",
+      "banking",
+      "security",
+      "centralized",
+      "cybersecurity",
+      "management",
+      "platform",
+      "blog",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--www.youtube.com-watch?v=R36-byUD6g0&feature=youtu.be",
+    "category": "resource",
+    "slug": "https:--www.youtube.com-watch?v=R36-byUD6g0&feature=youtu.be",
+    "title": "Virtual Galaxy Infotech IPO Analysis",
+    "subtitle": "Video Coverage",
+    "url": "https://www.youtube.com/watch?v=R36-byUD6g0&feature=youtu.be",
+    "summary": "Virtual Galaxy Infotech IPO Analysis",
+    "content": "Virtual Galaxy Infotech IPO Analysis.",
+    "tags": [
+      "virtual",
+      "galaxy",
+      "infotech",
+      "ipo",
+      "analysis",
+      "video",
+      "coverage",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--youtu.be-a8gRM6tZ2Vc?si=9dfvyc0CcBcHq8Ke",
+    "category": "resource",
+    "slug": "https:--youtu.be-a8gRM6tZ2Vc?si=9dfvyc0CcBcHq8Ke",
+    "title": "VGIL NSE Listing Ceremony",
+    "subtitle": "Video Coverage",
+    "url": "https://youtu.be/a8gRM6tZ2Vc?si=9dfvyc0CcBcHq8Ke",
+    "summary": "VGIL NSE Listing Ceremony",
+    "content": "VGIL NSE Listing Ceremony.",
+    "tags": [
+      "vgil",
+      "nse",
+      "listing",
+      "ceremony",
+      "video",
+      "coverage",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "RES-https:--youtu.be-Ik_in1SUk88?si=Uk0fZ4icrnDtTYOk",
+    "category": "resource",
+    "slug": "https:--youtu.be-Ik_in1SUk88?si=Uk0fZ4icrnDtTYOk",
+    "title": "Investment & Growth Strategy",
+    "subtitle": "Video Coverage",
+    "url": "https://youtu.be/Ik_in1SUk88?si=Uk0fZ4icrnDtTYOk",
+    "summary": "Investment & Growth Strategy",
+    "content": "Investment & Growth Strategy.",
+    "tags": [
+      "investment",
+      "growth",
+      "strategy",
+      "video",
+      "coverage",
+      "resource"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "CAR-why-join",
+    "category": "career",
+    "slug": "why-join",
+    "title": "Why join Virtual Galaxy",
+    "subtitle": "Careers at Virtual Galaxy Infotech",
+    "url": "https://vgipl-website.vercel.app/careers/why-join",
+    "summary": "Discover the opportunities to shape your path and build your future with us.",
+    "content": "Why join Virtual Galaxy. Discover the opportunities to shape your path and build your future with us.",
+    "tags": [
+      "why",
+      "join",
+      "virtual",
+      "galaxy",
+      "why-join",
+      "career",
+      "jobs",
+      "culture"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "CAR-meet-our-people",
+    "category": "career",
+    "slug": "meet-our-people",
+    "title": "Meet our people",
+    "subtitle": "Careers at Virtual Galaxy Infotech",
+    "url": "https://vgipl-website.vercel.app/careers/meet-our-people",
+    "summary": "Get to know the brilliant minds driving innovation at Virtual Galaxy.",
+    "content": "Meet our people. Get to know the brilliant minds driving innovation at Virtual Galaxy.",
+    "tags": [
+      "meet",
+      "people",
+      "meet-our-people",
+      "career",
+      "jobs",
+      "culture"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "CAR-career-path",
+    "category": "career",
+    "slug": "career-path",
+    "title": "Career path",
+    "subtitle": "Careers at Virtual Galaxy Infotech",
+    "url": "https://vgipl-website.vercel.app/careers/career-path",
+    "summary": "Explore hiring opportunities, what we offer, and current job openings.",
+    "content": "Career path. Explore hiring opportunities, what we offer, and current job openings.",
+    "tags": [
+      "career",
+      "path",
+      "career-path",
+      "jobs",
+      "culture"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  },
+  {
+    "id": "CAR-lets-connect",
+    "category": "career",
+    "slug": "lets-connect",
+    "title": "Let's connect",
+    "subtitle": "Careers at Virtual Galaxy Infotech",
+    "url": "https://vgipl-website.vercel.app/careers/lets-connect",
+    "summary": "Reach out to our recruitment team for your next big step.",
+    "content": "Let's connect. Reach out to our recruitment team for your next big step.",
+    "tags": [
+      "let",
+      "connect",
+      "lets-connect",
+      "career",
+      "jobs",
+      "culture"
+    ],
+    "lastUpdated": "2026-10-18T20:31:35.275Z"
+  }
+]
