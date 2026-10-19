@@ -86,8 +86,7 @@ const pluginManifest = {
               prompt: "Write a fictional story about space exploration."
             }
           ]
-        },
-        notes_for_reviewer: "All 6 tools are strictly read-only and query indexed public VGIL corporate knowledge. The MCP server runs over Streamable HTTP at https://qorvex-vgil-backend-production.up.railway.app/mcp with Bearer token authentication configured in the platform."
+        }
       }
     }
   }
@@ -102,7 +101,15 @@ const mcpConfig = {
   mcpServers: {
     "qorvex-vgil": {
       type: "streamable-http",
-      url: "https://qorvex-vgil-backend-production.up.railway.app/mcp"
+      url: "https://qorvex-vgil-backend-production.up.railway.app/mcp",
+      extensions: {
+        "com.openai": {
+          auth: {
+            type: "api_key",
+            headerScheme: "bearer"
+          }
+        }
+      }
     }
   }
 };
@@ -188,7 +195,7 @@ if (fs.existsSync(rootLogoSrc)) {
 }
 
 // 6. Prepare .well-known/ai-plugin.json AND root ai-plugin.json (OpenAI Classic Plugin Manifest)
-// Crucial: Set auth to service_http with bearer authorization to match the Railway MCP server!
+// Configured with user_http bearer auth so that Codex/ChatGPT binds the user-provided Bearer token
 const aiPluginManifest = {
   schema_version: "v1",
   name_for_human: "QORVEX — VGIL Knowledge Connector",
@@ -196,16 +203,13 @@ const aiPluginManifest = {
   description_for_human: "Independent AI connector providing grounded information about VGIL banking suites, IT services, and corporate disclosures from public documents.",
   description_for_model: "Access verified corporate, core banking (CBS E-Banker), IT solutions, and smart infrastructure metrics from public Virtual Galaxy Infotech Limited (VGIL) disclosures. Always cite official sources. Disclaimer: This connector is independently developed and is not officially affiliated with or endorsed by Virtual Galaxy Infotech Limited.",
   auth: {
-    type: "service_http",
-    authorization_type: "bearer",
-    verification_tokens: {
-      openai: "qorvex-openai-apps-challenge-verified"
-    }
+    type: "user_http",
+    authorization_type: "bearer"
   },
   api: {
     type: "openapi",
     url: "https://qorvex-vgil-backend-production.up.railway.app/api/openapi.json",
-    is_user_authenticated: false
+    is_user_authenticated: true
   },
   logo_url: "https://public-nine-alpha-61.vercel.app/assets/icon-dark.svg",
   contact_email: "support@databuks.com",

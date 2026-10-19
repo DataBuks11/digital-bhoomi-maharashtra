@@ -55,6 +55,8 @@ assert(mcpData.mcpServers && mcpData.mcpServers["qorvex-vgil"], "qorvex-vgil ser
 const server = mcpData.mcpServers["qorvex-vgil"];
 assert(server.type === "streamable-http", "Server type is streamable-http");
 assert(server.url === "https://qorvex-vgil-backend-production.up.railway.app/mcp", "Server URL matches production Railway MCP endpoint");
+assert(server.extensions && server.extensions["com.openai"]?.auth?.type === "api_key", "mcp.json declares extensions.com.openai.auth.type === 'api_key'");
+assert(server.extensions["com.openai"]?.auth?.headerScheme === "bearer", "mcp.json declares extensions.com.openai.auth.headerScheme === 'bearer'");
 
 // 3. Validate .well-known/ai-plugin.json & ai-plugin.json Authentication
 console.log("\n3. Checking Classic Plugin Manifests & Bearer Auth Alignment...");
@@ -66,9 +68,9 @@ const aiPluginPaths = [
 for (const p of aiPluginPaths) {
   assert(fs.existsSync(p), `${path.relative(stagingDir, p)} exists`);
   const data = JSON.parse(fs.readFileSync(p, "utf8"));
-  assert(data.auth.type === "service_http", `${path.relative(stagingDir, p)} declares auth.type === 'service_http'`);
+  assert(data.auth.type === "user_http", `${path.relative(stagingDir, p)} declares auth.type === 'user_http'`);
   assert(data.auth.authorization_type === "bearer", `${path.relative(stagingDir, p)} declares auth.authorization_type === 'bearer'`);
-  assert(data.auth.verification_tokens && data.auth.verification_tokens.openai, `${path.relative(stagingDir, p)} has verification_tokens`);
+  assert(data.api.is_user_authenticated === true, `${path.relative(stagingDir, p)} declares api.is_user_authenticated === true`);
   assert(data.description_for_model.includes("Disclaimer:"), `${path.relative(stagingDir, p)} has non-endorsement disclaimer`);
 }
 
