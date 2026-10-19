@@ -2,6 +2,12 @@ node_modules
 dist
 dist-plugin
 .env
+.env.*
+!.env.example
 bundle.js
 .vercel
-
+*.log
+*.pem
+*.key
+.DS_Store
+Thumbs.db

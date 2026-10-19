@@ -9,6 +9,8 @@ import { knowledgeStore } from "./knowledge/store.js";
 import { KnowledgeCategory } from "./knowledge/types.js";
 import { handleChatMessage } from "./llm/chat.js";
 import { tokenHarborClient } from "./llm/client.js";
+import { oauthRouter } from "./auth/routes.js";
+import { createMcpAuthMiddleware } from "./auth/oauth.js";
 
 const app = express();
 
@@ -60,14 +62,22 @@ app.use(
       return callback(null, false);
     },
     methods: ["GET", "POST", "OPTIONS"],
-    allowedHeaders: ["Content-Type", "Authorization", "Accept", "mcp-session-id", "x-mcp-session-id"]
+    allowedHeaders: ["Content-Type", "Authorization", "Accept", "mcp-session-id", "x-mcp-session-id"],
+    exposedHeaders: ["WWW-Authenticate", "mcp-session-id"]
   })
 );
 
 app.use(express.json({ limit: "1mb" }));
+app.use(express.urlencoded({ extended: true, limit: "1mb" }));
 app.use(express.static(path.resolve(process.cwd(), "public")));
 const PORT = Number(process.env.PORT ?? 3000);
 const API_KEY = process.env.MCP_API_KEY?.trim();
+
+// Mount OAuth 2.1 Router (Protected Resource Metadata, Auth Server Metadata, Authorize, Token, Register, Revoke)
+app.use(oauthRouter);
+
+// Unified Authentication: Supports Bearer API key (Codex/internal) + OAuth 2.1 access tokens (ChatGPT)
+const requireApiKey = createMcpAuthMiddleware(API_KEY);
 
 app.get("/health", (_req, res) => res.json({
   ok: true,
@@ -76,21 +86,9 @@ app.get("/health", (_req, res) => res.json({
   indexedRecords: knowledgeStore.count,
   llmConfigured: tokenHarborClient.isConfigured(),
   llmModel: tokenHarborClient.getModel(),
+  oauthEnabled: true,
   time: new Date().toISOString()
 }));
-
-function requireApiKey(req: Request, res: Response, next: NextFunction) {
-  if (!API_KEY) return next(); // For local testing only; set key on Railway.
-  const authHeader = req.header("authorization")?.trim() ?? "";
-  if (!authHeader.toLowerCase().startsWith("bearer ")) {
-    return res.status(401).json({ error: "Unauthorized: Missing or malformed Bearer token" });
-  }
-  const token = authHeader.slice(7).trim();
-  if (token !== API_KEY) {
-    return res.status(401).json({ error: "Unauthorized: Invalid token" });
-  }
-  next();
-}
 
 // REST API for direct search and knowledge retrieval
 app.get("/api/search", (req: Request, res: Response) => {
@@ -369,7 +367,7 @@ export function makeServer() {
 app.post("/mcp", requireApiKey, async (req: Request, res: Response) => {
   // Normalize Accept header for client compatibility with Model Context Protocol Streamable HTTP spec
   const currentAccept = req.header("accept") ?? "";
-  if (!currentAccept.includes("text/event-stream") || !currentAccept.includes("application/json")) {
+  if (!currentAccept || currentAccept === "*/*" || (!currentAccept.includes("text/event-stream") && !currentAccept.includes("application/json"))) {
     req.headers["accept"] = "application/json, text/event-stream";
   }
 
@@ -434,13 +432,31 @@ app.get("/api/openapi.json", (_req: Request, res: Response) => {
           type: "http",
           scheme: "bearer",
           bearerFormat: "API Key",
-          description: "Enter the Bearer token configured for QORVEX VGIL Railway backend access."
+          description: "Codex & direct API Bearer token for QORVEX VGIL backend access."
+        },
+        OAuth2: {
+          type: "oauth2",
+          description: "OAuth 2.1 authorization code flow with PKCE S256 for ChatGPT custom connector.",
+          flows: {
+            authorizationCode: {
+              authorizationUrl: `${host}/oauth/authorize`,
+              tokenUrl: `${host}/oauth/token`,
+              refreshUrl: `${host}/oauth/token`,
+              scopes: {
+                "mcp:read": "Read-only access to VGIL documentation, company info, and products.",
+                "mcp:write": "Create report summaries and run active tool queries."
+              }
+            }
+          }
         }
       }
     },
     security: [
       {
         BearerAuth: []
+      },
+      {
+        OAuth2: ["mcp:read", "mcp:write"]
       }
     ],
     paths: {
@@ -449,7 +465,10 @@ app.get("/api/openapi.json", (_req: Request, res: Response) => {
           operationId: "handleMCPStreamableHttp",
           summary: "Model Context Protocol (MCP) Streamable HTTP transport",
           description: "Executes MCP JSON-RPC protocol requests (tools/list, tools/call) against the QORVEX VGIL knowledge engine.",
-          security: [{ BearerAuth: [] }],
+          security: [
+            { BearerAuth: [] },
+            { OAuth2: ["mcp:read", "mcp:write"] }
+          ],
           requestBody: {
             required: true,
             content: {
