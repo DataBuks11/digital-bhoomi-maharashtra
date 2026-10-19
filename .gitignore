@@ -1,5 +1,7 @@
 node_modules
 dist
+dist-plugin
 .env
 bundle.js
 .vercel
+
