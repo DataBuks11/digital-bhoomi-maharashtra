@@ -414,7 +414,7 @@ app.get("/mcp", requireApiKey, async (req: Request, res: Response) => {
 
 app.delete("/mcp", requireApiKey, (_req, res) => res.status(405).set("Allow", "POST, GET").json({ error: "Stateless demo endpoint does not support DELETE." }));
 
-// OpenAPI 3.1 Specification for ChatGPT Custom GPT Actions
+// OpenAPI 3.1 Specification for ChatGPT Custom GPT Actions & OpenAI Plugins
 app.get("/api/openapi.json", (_req: Request, res: Response) => {
   const host = process.env.RAILWAY_PUBLIC_DOMAIN 
     ? `https://${process.env.RAILWAY_PUBLIC_DOMAIN}`
@@ -423,17 +423,68 @@ app.get("/api/openapi.json", (_req: Request, res: Response) => {
   return res.json({
     openapi: "3.1.0",
     info: {
-      title: "QORVEX — VGIL Enterprise AI Connector API",
-      version: "0.2.0",
-      description: "Enterprise AI connector exposing verified knowledge and search from Virtual Galaxy Infotech Limited (VGIL)."
+      title: "QORVEX — VGIL Knowledge Connector API",
+      version: "1.0.0",
+      description: "Independent AI connector providing grounded search and Model Context Protocol (MCP) access to public Virtual Galaxy Infotech Limited (VGIL) web documentation. Disclaimer: This service is independently developed and is not officially affiliated with or endorsed by Virtual Galaxy Infotech Limited."
     },
     servers: [{ url: host }],
+    components: {
+      securitySchemes: {
+        BearerAuth: {
+          type: "http",
+          scheme: "bearer",
+          bearerFormat: "API Key",
+          description: "Enter the Bearer token configured for QORVEX VGIL Railway backend access."
+        }
+      }
+    },
+    security: [
+      {
+        BearerAuth: []
+      }
+    ],
     paths: {
+      "/mcp": {
+        post: {
+          operationId: "handleMCPStreamableHttp",
+          summary: "Model Context Protocol (MCP) Streamable HTTP transport",
+          description: "Executes MCP JSON-RPC protocol requests (tools/list, tools/call) against the QORVEX VGIL knowledge engine.",
+          security: [{ BearerAuth: [] }],
+          requestBody: {
+            required: true,
+            content: {
+              "application/json": {
+                schema: {
+                  type: "object",
+                  required: ["jsonrpc", "method"],
+                  properties: {
+                    jsonrpc: { type: "string", example: "2.0" },
+                    id: { oneOf: [{ type: "string" }, { type: "integer" }], example: 1 },
+                    method: { type: "string", example: "tools/call" },
+                    params: { type: "object" }
+                  }
+                }
+              }
+            }
+          },
+          responses: {
+            "200": {
+              description: "MCP JSON-RPC response",
+              content: { "application/json": { schema: { type: "object" } } }
+            },
+            "401": {
+              description: "Unauthorized: Missing or malformed Bearer token",
+              content: { "application/json": { schema: { type: "object" } } }
+            }
+          }
+        }
+      },
       "/api/search": {
         get: {
           operationId: "searchVGILKnowledge",
           summary: "Search verified VGIL knowledge base",
-          description: "Search official company background, products, services, investor relations, and resources from VGIL.",
+          description: "Search official company background, products, services, investor relations, and resources from public VGIL documentation.",
+          security: [{ BearerAuth: [] }],
           parameters: [
             {
               name: "q",
@@ -470,6 +521,7 @@ app.get("/api/openapi.json", (_req: Request, res: Response) => {
           operationId: "chatVGILAssistant",
           summary: "Ask a question about VGIL with grounded answers",
           description: "Submit a question about VGIL products, services, financials, or offices to receive a strictly grounded answer with citations.",
+          security: [{ BearerAuth: [] }],
           requestBody: {
             required: true,
             content: {
@@ -496,6 +548,7 @@ app.get("/api/openapi.json", (_req: Request, res: Response) => {
         get: {
           operationId: "getHealthStatus",
           summary: "System health and indexed records telemetry",
+          security: [],
           responses: {
             "200": {
               description: "System telemetry and record counts",
