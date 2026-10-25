@@ -76,6 +76,10 @@ const API_KEY = process.env.MCP_API_KEY?.trim();
 // Mount OAuth 2.1 Router (Protected Resource Metadata, Auth Server Metadata, Authorize, Token, Register, Revoke)
 app.use(oauthRouter);
 
+app.get(["/", "/qorvex"], (_req: Request, res: Response) => {
+  res.sendFile(path.resolve(process.cwd(), "public", "qorvex.html"));
+});
+
 // Unified Authentication: Supports Bearer API key (Codex/internal) + OAuth 2.1 access tokens (ChatGPT)
 const requireApiKey = createMcpAuthMiddleware(API_KEY);
 

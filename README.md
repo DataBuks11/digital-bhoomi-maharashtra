@@ -1,233 +1,129 @@
-# QORVEX — Enterprise AI Connector for Virtual Galaxy Infotech Limited (VGIL)
+# Digital Bhoomi Maharashtra (डिजिटल भूमी महाराष्ट्र)
+### Advanced Land Records, Cadastral Survey & QR Verification Prototype
 
-> **QORVEX** is a modular enterprise AI connector and Model Context Protocol (MCP) prototype designed for **Virtual Galaxy Infotech Limited (VGIL)**. Inspired by enterprise AI integration patterns (such as Persistent Systems partner offerings), QORVEX bridges enterprise knowledge from the official [VGIL Web Portal](https://vgipl-website.vercel.app/) into leading AI workflows with zero hallucination and strict grounding.
-
----
-
-## 🌟 Key Highlights & Architecture
-
-- **66 Real Indexed Knowledge Records**: Extracted directly from VGIL's production website bundle (`data/vgil-knowledge.json`), covering 17 products, 7 services, 14 investor disclosures, 22 resource articles, 4 career openings, and 2 corporate profile documents.
-- **Strict Grounding & Zero Hallucination**: Model answers are strictly grounded in retrieved factual documents. Questions outside the indexed VGIL domain cleanly return explicit notifications rather than fabricated claims.
-- **Enterprise MCP Server (Streamable HTTP Transport)**: Implements standard Model Context Protocol via `@modelcontextprotocol/sdk` over Streamable HTTP (`/mcp`), secured with bearer token authentication (`MCP_API_KEY`).
-- **TokenHarbor + DeepSeek V4.1 Flash**: Fast, cost-efficient LLM completions through the OpenAI-compatible TokenHarbor router (`https://tokenharbor.ai/v1`).
-- **Modern Enterprise Web UI**: Responsive single-page interface with 5 dedicated operational views:
-  1. **AI Assistant**: Natural language Q&A with live citations and suggested prompts.
-  2. **Knowledge Search**: Direct sub-millisecond keyword lookup with category filters.
-  3. **Products & Services**: Filterable catalog of verified banking, enterprise, and smart technology solutions.
-  4. **MCP Integration**: Verified MCP endpoints, tools list, and client configuration snippets.
-  5. **System Status**: Live telemetry, health metrics, and model status from `/health`.
-
-```
-                    +------------------------------------------+
-                    |    Client Layer                          |
-                    |  - QORVEX Enterprise Demo UI (Port 3000) |
-                    |  - Claude Desktop / Cursor / Antigravity |
-                    +--------------------+---------------------+
-                                         |
-                       HTTP / JSON-RPC   | Bearer Auth (MCP_API_KEY)
-                                         v
-+-------------------------------------------------------------------------------+
-| QORVEX Express Engine                                                         |
-|                                                                               |
-|   +-----------------------+     +--------------------+   +----------------+   |
-|   | /api/chat             |     | Streamable HTTP    |   | REST Endpoints |   |
-|   | Grounded Orchestration|     | /mcp (MCP Server)  |   | /api/search    |   |
-|   +-----------+-----------+     +---------+----------+   | /health        |   |
-|               |                           |              +--------+-------+   |
-|               v                           v                       |           |
-|      +------------------------------------------+                 |           |
-|      | VGIL Knowledge Store (66 Verified Docs)  |<----------------+           |
-|      | - Token matching with word boundaries    |                             |
-|      | - Category and subject-stopword filters  |                             |
-|      +--------------------+---------------------+                             |
-|                           |                                                   |
-|                           v Retrieved Context                                 |
-|      +------------------------------------------+                             |
-|      | TokenHarbor Client (OpenAI-compatible)   |                             |
-|      | Model: deepseek-v4.1-flash:free          |                             |
-|      +--------------------+---------------------+                             |
-+---------------------------|---------------------------------------------------+
-                            v
-+-------------------------------------------------------------------------------+
-| External LLM Service                                                          |
-| TokenHarbor Router (https://tokenharbor.ai/v1) -> DeepSeek V4.1 Flash         |
-+-------------------------------------------------------------------------------+
-```
+> [!NOTE]
+> **Demonstration Disclaimer:** Digital Bhoomi Maharashtra is an interactive conceptual prototype and demonstration system. It is not an official government portal. All cadastral survey numbers, ULPIN codes, citizen names, khata numbers, and stamps are fictional sample demonstrations for Maharashtra, India.
 
 ---
 
-## 🛠 Registered MCP Tools
+## 🏛️ System Overview
 
-All 6 tools are registered on the Streamable HTTP transport at `/mcp` and verified with automated test suites:
-
-| Tool Name | Parameters | Purpose |
-| :--- | :--- | :--- |
-| `search_company_info` | `query` (string) | Search corporate background, history, MIHAN SEZ facility, certifications, leadership, and contact data. |
-| `get_product_details` | `product_name_or_slug` (string) | Retrieve verified specifications, features, metrics (e.g. 200+ banks, 30B+ transactions), and official product URLs. |
-| `summarize_service` | `service_name_or_slug` (string) | Retrieve capabilities, offerings, and direct portal links for VGIL service domains (Cloud, Cybersecurity, AI/ML, etc.). |
-| `search_knowledge` | `query`, `category` (optional), `limit` | Universal knowledge search across all 66 indexed VGIL records. |
-| `get_project_status` | `project_id` (string) | Retrieve status and milestones for internal integration deliverables. |
-| `create_report` | `title` (string), `notes` (string[]) | Assemble structured briefing drafts from verified notes. |
+**Digital Bhoomi Maharashtra** is an interactive full-stack prototype modernizing land records management, cadastral survey operations, unique property identification (Bhu-Aadhaar / ULPIN), QR-based record lookup, ownership record management (7/12 extracts, Form 8A, Ferfar/Mutation register), and verification workflows across Maharashtra.
 
 ---
 
-## 🚀 Quickstart & Local Setup
+## 📦 Implemented Modules (14/14 Modules Complete)
+
+| # | Module | Core Functionality & Features |
+|---|---|---|
+| 1 | **Executive Dashboard** | Real-time state KPIs (Parcels, Active Surveys, Ferfar Queue, Cadastral Area, Stamp Duty Collected), land classification charts, district distribution, and quick action hubs. |
+| 2 | **7/12 Land Records Repository** | Searchable & filterable table by District, Taluka, Village, Gat No, ULPIN; "Enroll New Parcel" modal with automatic ULPIN generation; Official Maharashtra 7/12 (Saat Bara) extract viewer (Gaon Namuna 7, Gaon Namuna 12 crop details, Form 8A ledger). |
+| 3 | **Interactive Land Map** | Leaflet & OpenStreetMap GIS layer with polygon boundaries across Pune, Nagpur, Nashik, Sambhaji Nagar, and Thane; interactive click-to-inspect popup cards; interactive polygon measurement tool calculating perimeter and area (sq. meters & gunthas). |
+| 4 | **Land Survey Management (Mojani)** | Cadastral survey booking, status lifecycle (`REQUESTED` → `ASSIGNED` → `IN_PROGRESS` → `FIELD_COMPLETED` → `APPROVED`), Total Station GPS coordinates, surveyor field notes, boundary disputes flags, and official PDF Survey Report export. |
+| 5 | **QR Bhu-Aadhaar Engine** | Cryptographic QR generator with Maharashtra Government watermark; dual-mode QR scanner supporting live webcam camera scanning (`html5-qrcode`), document image file upload, and manual ULPIN fallback; active/inactive/revoked status validation. |
+| 6 | **Ownership & Khatedar Registry** | Multi-owner joint khatedar management with share percentages (e.g. 50%, 25%, 25%), relation types, masked Aadhaar reference; Gaon Namuna 6 mutation register overview. |
+| 7 | **Verification & Approval Queue** | Talathi / Mandal Adhikari / Tehsildar judicial inbox; 4-point statutory inspection checklist (title chain, SRO Index-II, Mojani conformity, 15-day notice expiry); 3-way decision workflow (Approve with digital seal, Request Correction, Reject). |
+| 8 | **Property Registration Workflow** | 4-step Sub-Registrar Office (SRO) deed registration wizard: Party details, Ready Reckoner market valuation calculation, Stamp duty (6%) & fee calculation, e-Challan GRAS payment simulation, and SRO appointment token booking. |
+| 9 | **Digital Property Cards** | Official Maharashtra Malmatta Patrak (Akhiv Patrika) format with Ashok Stambh emblem, ULPIN badge, CTS number, area, registered occupants, encumbrances, embedded QR code, and instant high-fidelity PDF export via jsPDF. |
+| 10 | **Document Vault (Abhilekh)** | Centralized repository for 7/12 extracts, Form 8A, registered sale deeds, cadastral Tipan maps, and survey reports; categorized filtering, document metadata, SHA-256 integrity status, and simulated Supabase Storage. |
+| 11 | **Reports & Analytics** | Interactive analytics powered by Recharts (monthly stamp duty collections, district volume, land classification donut, survey lifecycle funnel); filtered CSV land records export; state cadastral summary PDF generator. |
+| 12 | **User & Role Management (RBAC)** | Multi-persona support (Super Admin, Cadastral Surveyor, Verification Officer, Citizen); directory of system accounts; granular permission policy matrix; instant role switcher. |
+| 13 | **Audit Logs & Notifications** | Immutable government audit trail recording actor, role, action, module, timestamp, IP address, and details JSON; live notification center with unread badges and direct record navigation. |
+| 14 | **System Settings & Demo Engine** | Configurable portal title, demonstration watermark toggle, maintenance mode simulation, Ready Reckoner base rates, SRO active offices management, and one-click "Reset to Demo Baseline" button. |
+
+---
+
+## 🛠️ Technology Stack
+
+- **Frontend Core**: React 18, TypeScript, Vite
+- **Styling**: Tailwind CSS + custom government theme variables (Ashoka Lion / Tricolor subtle accents, Emerald / Slate / Gold theme, dark & light mode support, accessible high-contrast tables).
+- **Icons**: Lucide React
+- **Mapping & GIS**: Leaflet, OpenStreetMap
+- **QR Code Engine**: `qrcode`, `html5-qrcode`
+- **Charts & Visualizations**: Recharts
+- **PDF Generation**: jsPDF
+- **Backend & Database**:
+  - PostgreSQL schema with Row Level Security (RLS)
+  - Supabase client (Database, Auth, Storage)
+  - Built-in Local Storage persistent offline demonstration engine (100% functional out-of-the-box without requiring live cloud credentials)
+
+---
+
+## 🚀 Getting Started
 
 ### 1. Prerequisites
-- Node.js 20+ installed
-- NPM 10+
+- **Node.js**: v18.0.0 or higher (v22 recommended)
+- **npm**: v9.0.0 or higher
 
 ### 2. Installation
 ```bash
-git clone <repository_url>
+# Clone the repository and navigate to the project directory
 cd QORVEX_VGIL_SyncAI_MCP_MVP
+
+# Install all dependencies
 npm install
 ```
 
-### 3. Configure Environment Variables
-Copy `.env.example` to `.env`:
-```bash
-cp .env.example .env
-```
-
-Ensure `.env` contains:
-```ini
-PORT=3000
-MCP_API_KEY=your_secure_mcp_api_key_here
-LLM_BASE_URL=https://tokenharbor.ai/v1
-LLM_API_KEY=your_tokenharbor_api_key_here
-LLM_MODEL=deepseek-v4.1-flash:free
-```
-
-> **Security Note**: Never commit `.env` or paste live API keys into public logs. API keys are kept strictly server-side and masked in all client endpoints.
-
-### 4. Build & Start Locally
-```bash
-# Build TypeScript
-npm run build
-
-# Start the server
-npm start
-```
-Or run in development mode with live watch:
+### 3. Run Locally (Development Server)
 ```bash
 npm run dev
 ```
-
-Open your browser to:
-- **Enterprise Web UI**: `http://localhost:3000/`
-- **Health Telemetry**: `http://localhost:3000/health`
-- **MCP Endpoint**: `http://localhost:3000/mcp` (POST with Bearer header)
+Open [http://localhost:5173](http://localhost:5173) in your browser.
 
 ---
 
-## 🧪 Automated Testing
+## 🗄️ Database Setup (Supabase & PostgreSQL)
 
-Run the full unified test suite covering Phase 2 (Knowledge Ingestion & Indexing), Phase 3 (MCP Security & Transport), and Phase 4 (TokenHarbor LLM Grounded Chat):
+The prototype works **100% offline out-of-the-box** using browser local storage persistence. To connect to a live Supabase PostgreSQL backend:
 
-```bash
-npm test
+### 1. Execute SQL Migrations
+Open your Supabase Project Dashboard → **SQL Editor**, and execute the migration script located at:
 ```
-
-### Test Suite Summary: 56/56 Passed (100%)
-- **Phase 2 Suite (`scripts/test-phase2.ts`)**: 26 passed
-  - KnowledgeStore integrity (66 records, 17 products, 7 services)
-  - Keyword and word-boundary search relevance
-  - Real source URL validation
-  - MCP Tool schema registration and unknown item safety
-- **Phase 3 & 4 Suite (`scripts/test-phase3-4.ts`)**: 30 passed
-  - Bearer token authentication (401 on missing/invalid keys)
-  - Streamable HTTP Transport with official MCP client
-  - Remote tool execution (`tools/list` and `tools/call`)
-  - Request length limiting & input sanitization
-  - Strict unknown question fallback (zero hallucination)
-  - Live TokenHarbor DeepSeek completion with real source attribution
-  - Zero credential leakage in HTTP responses
-
----
-
-## 🔌 Connecting External MCP Clients
-
-### Claude Desktop Configuration
-Add the following entry to your `claude_desktop_config.json`:
-
-```json
-{
-  "mcpServers": {
-    "qorvex-vgil": {
-      "url": "http://localhost:3000/mcp",
-      "headers": {
-        "Authorization": "Bearer your_secure_mcp_api_key_here"
-      }
-    }
-  }
-}
+supabase/migrations/001_initial_schema.sql
 ```
+This script creates:
+- `profiles`, `land_parcels`, `ownership_records`, `survey_requests`, `mutations`, `registrations`, `qr_codes`, `documents`, `notifications`, `audit_logs`, and `system_settings` tables.
+- Foreign keys, B-tree indexes, and updated timestamp triggers.
+- Row Level Security (RLS) policies allowing public demonstration read/write operations.
 
-### Antigravity / Cursor Configuration
-In your MCP configuration file (`mcp_config.json`):
-```json
-{
-  "mcpServers": {
-    "qorvex-vgil": {
-      "url": "http://localhost:3000/mcp",
-      "headers": {
-        "Authorization": "Bearer your_secure_mcp_api_key_here"
-      }
-    }
-  }
-}
+### 2. Configure Environment Variables
+Create a `.env` file in the project root:
+```env
+# Supabase Configuration (Optional - leave empty for offline demo mode)
+VITE_SUPABASE_URL=https://your-project.supabase.co
+VITE_SUPABASE_ANON_KEY=your-anon-key-here
 ```
 
 ---
 
-## ☁️ Production Deployment (Railway)
+## 🧪 Testing Critical Workflows
 
-The repository includes a ready-to-deploy `railway.json`:
-
-```json
-{
-  "$schema": "https://railway.app/railway.schema.json",
-  "build": {
-    "builder": "NIXPACKS",
-    "buildCommand": "npm install && npm run build"
-  },
-  "deploy": {
-    "startCommand": "npm start",
-    "healthcheckPath": "/health",
-    "healthcheckTimeout": 100
-  }
-}
-```
-
-### Deployment Steps:
-1. Initialize a private Git repository and commit the code (ensure `.env` is ignored):
-   ```bash
-   git init
-   git add .
-   git commit -m "feat: QORVEX VGIL Enterprise AI Connector MVP"
-   ```
-2. Link the repository to Railway.
-3. Configure the following environment variables in the Railway Dashboard:
-   - `PORT=3000`
-   - `MCP_API_KEY=<generated-strong-secret>`
-   - `LLM_BASE_URL=https://tokenharbor.ai/v1`
-   - `LLM_API_KEY=<tokenharbor-api-key>`
-   - `LLM_MODEL=deepseek-v4.1-flash:free`
-4. Deploy and verify that `https://<your-railway-app>.up.railway.app/health` returns `HTTP 200` with `indexedRecords: 66`.
+The following 10 end-to-end workflows have been tested and verified:
+1. **Create a Land Parcel**: Navigate to *7/12 & Land Records* → Click *Enroll New Land Parcel* → Enter Gat No, Village, Owner → Submit → Observe automatic ULPIN assignment.
+2. **Generate QR Code**: Navigate to *QR Bhu-Aadhaar Engine* → Select *Generate & Print* → View generated QR with Gov seal and watermark certificate.
+3. **Scan QR Code**: Switch to *Scan & Verify* → Click *Test Active (Gat 142)* or point camera at a QR code → Verify *Authentic Record Verified* response.
+4. **Inspect Land Record**: Click *Open Full 7/12 Extract* from the verification findings or click any row in the Land Records table.
+5. **Create Survey Request**: Navigate to *Survey Management (Mojani)* → Click *Book Mojani Survey* → Select Gat, applicant name, and preferred date.
+6. **Update Survey Status**: Click *Update* on any survey in the queue → Change status (`IN_PROGRESS` / `FIELD_COMPLETED`) → Add field notes and area → Save.
+7. **Submit Verification**: In *Ownership & Khatedars*, view existing mutations or file a new Ferfar application.
+8. **Officer Review**: Navigate to *Verification & Ferfar Approval* → Click *Review Case* → Check statutory items → Enter remarks → Click *Approve & Sign Ferfar*.
+9. **Generate Digital Property Card**: Navigate to *Digital Property Cards* → Select parcel → View the official Malmatta Patrak card → Click *Download PDF Card*.
+10. **Export Report**: Navigate to *Reports & Analytics* → Click *Export Filtered CSV* or *State Audit PDF*.
 
 ---
 
-## 🛡 Security & Enterprise Compliance
+## 🔐 Security & Role-Based Access Control (RBAC)
 
-- **No Secret Leakage**: The client-side UI contains zero credentials. Server endpoints sanitize and mask any internal keys.
-- **DOM-safe Rendering**: User and AI text is rendered via secure DOM node constructors (`document.createElement`, `textContent`) avoiding HTML injection vulnerabilities.
-- **Strict Citation Grounding**: The retrieval pipeline validates matches against verified URLs. Unsupported topics receive clear, polite disclosures that the VGIL portal does not document the query.
+The portal supports 4 operational roles:
+- **Super Admin**: Complete master configuration, user administration, and system audit log inspection.
+- **Verification Officer / Talathi / Tehsildar**: Review statutory 15-day notice periods, verify SRO Index-II deeds, and digitally approve/reject Ferfar mutations.
+- **Cadastral Surveyor**: Manage field measurement queues, record Total Station GPS demarcations, and file boundary dispute notices.
+- **Citizen / Khatedar**: Public search, digital 7/12 extract inspection, Malmatta Patrak card downloads, and SRO appointment token booking.
+
+You can switch personas at any time using the **Role Switcher** in the top navigation bar.
 
 ---
 
-## 📄 License & Attribution
+## 📄 License & Disclaimer
 
-- **Organization**: Virtual Galaxy Infotech Limited (VGIL)
-- **Portal Source**: [https://vgipl-website.vercel.app/](https://vgipl-website.vercel.app/)
-- **Project**: QORVEX Enterprise AI Connector
+This project is created for demonstration and educational purposes. Not an official Government of Maharashtra software application.

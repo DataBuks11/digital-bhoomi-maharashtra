@@ -1,0 +1,302 @@
+import React, { useState, useEffect } from 'react';
+import { 
+  LandParcel, 
+  OwnershipRecord, 
+  CropRecord, 
+  SurveyRequest, 
+  MutationApplication, 
+  PropertyRegistration, 
+  QRCodeRecord, 
+  DocumentRecord, 
+  AuditLog, 
+  NotificationItem, 
+  UserProfile, 
+  UserRole 
+} from './types';
+import { dataService } from './services/dataService';
+import { Header } from './components/layout/Header';
+import { Sidebar, ActiveTab } from './components/layout/Sidebar';
+import { WatermarkBanner } from './components/layout/WatermarkBanner';
+import { NotificationDrawer } from './components/layout/NotificationDrawer';
+
+// 14 Module Views
+import { DashboardView } from './views/DashboardView';
+import { LandRecordsView } from './views/LandRecordsView';
+import { InteractiveLandMapView } from './views/InteractiveLandMapView';
+import { LandSurveyView } from './views/LandSurveyView';
+import { QRCodeManagementView } from './views/QRCodeManagementView';
+import { OwnershipRecordsView } from './views/OwnershipRecordsView';
+import { VerificationApprovalView } from './views/VerificationApprovalView';
+import { PropertyRegistrationView } from './views/PropertyRegistrationView';
+import { DigitalPropertyCardsView } from './views/DigitalPropertyCardsView';
+import { DocumentManagementView } from './views/DocumentManagementView';
+import { ReportsAnalyticsView } from './views/ReportsAnalyticsView';
+import { UserRoleManagementView } from './views/UserRoleManagementView';
+import { AuditLogsView } from './views/AuditLogsView';
+import { SystemSettingsView } from './views/SystemSettingsView';
+
+export const App: React.FC = () => {
+  const [activeTab, setActiveTab] = useState<ActiveTab>('dashboard');
+  const [activeParams, setActiveParams] = useState<any>({});
+  const [searchQuery, setSearchQuery] = useState('');
+  const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+
+  // Central Application Data State
+  const [currentUser, setCurrentUser] = useState<UserProfile>(dataService.getCurrentUser());
+  const [parcels, setParcels] = useState<LandParcel[]>(dataService.getParcels());
+  const [ownerships, setOwnerships] = useState<OwnershipRecord[]>(dataService.getOwnershipRecords());
+  const [crops, setCrops] = useState<CropRecord[]>(dataService.getCrops());
+  const [surveys, setSurveys] = useState<SurveyRequest[]>(dataService.getSurveys());
+  const [mutations, setMutations] = useState<MutationApplication[]>(dataService.getMutations());
+  const [registrations, setRegistrations] = useState<PropertyRegistration[]>(dataService.getRegistrations());
+  const [qrCodes, setQrCodes] = useState<QRCodeRecord[]>(dataService.getQRCodes());
+  const [documents, setDocuments] = useState<DocumentRecord[]>(dataService.getDocuments());
+  const [notifications, setNotifications] = useState<NotificationItem[]>(dataService.getNotifications());
+  const [auditLogs, setAuditLogs] = useState<AuditLog[]>(dataService.getAuditLogs());
+  const [settings, setSettings] = useState(dataService.getSettings());
+
+  // Refresh all state from data service
+  const refreshData = () => {
+    setCurrentUser(dataService.getCurrentUser());
+    setParcels(dataService.getParcels());
+    setOwnerships(dataService.getOwnershipRecords());
+    setCrops(dataService.getCrops());
+    setSurveys(dataService.getSurveys());
+    setMutations(dataService.getMutations());
+    setRegistrations(dataService.getRegistrations());
+    setQrCodes(dataService.getQRCodes());
+    setDocuments(dataService.getDocuments());
+    setNotifications(dataService.getNotifications());
+    setAuditLogs(dataService.getAuditLogs());
+    setSettings(dataService.getSettings());
+  };
+
+  const handleRoleChange = (role: UserRole) => {
+    const updatedUser = dataService.setCurrentUserRole(role);
+    setCurrentUser(updatedUser);
+    refreshData();
+  };
+
+  const handleNavigate = (tab: ActiveTab, params: any = {}) => {
+    setActiveTab(tab);
+    setActiveParams(params);
+  };
+
+  // Search handler: If user types in global search and presses enter or types, navigate to records with query
+  const handleGlobalSearch = (query: string) => {
+    setSearchQuery(query);
+    if (query.trim() && activeTab !== 'records') {
+      setActiveTab('records');
+    }
+  };
+
+  const unreadNotificationsCount = notifications.filter(n => !n.isRead).length;
+  const pendingVerificationsCount = mutations.filter(m => m.status === 'PENDING_TALATHI_REVIEW' || m.status === 'NOTICE_PERIOD').length;
+  const pendingSurveysCount = surveys.filter(s => s.status !== 'APPROVED' && s.status !== 'REJECTED').length;
+
+  return (
+    <div className="min-h-screen bg-slate-50 flex flex-col antialiased">
+      
+      {/* 1. Official Demonstration Disclaimer Watermark Banner */}
+      {settings.disclaimerWatermark && <WatermarkBanner />}
+
+      {/* Maintenance Mode Simulation Banner */}
+      {settings.maintenanceMode && (
+        <div className="bg-red-600 text-white text-xs px-4 py-1 text-center font-bold">
+          SYSTEM MAINTENANCE NOTICE: Demonstration system in scheduled simulation maintenance.
+        </div>
+      )}
+
+      {/* 2. Top Header Navigation */}
+      <Header
+        currentUser={currentUser}
+        onRoleChange={handleRoleChange}
+        onOpenNotifications={() => setIsNotificationsOpen(true)}
+        unreadNotificationsCount={unreadNotificationsCount}
+        onSearch={handleGlobalSearch}
+        searchQuery={searchQuery}
+      />
+
+      {/* 3. Main Workspace: Sidebar + Dynamic Module View */}
+      <div className="flex-1 flex overflow-hidden">
+        
+        {/* Sidebar */}
+        <Sidebar
+          activeTab={activeTab}
+          onTabChange={(tab) => handleNavigate(tab)}
+          pendingVerificationsCount={pendingVerificationsCount}
+          pendingSurveysCount={pendingSurveysCount}
+        />
+
+        {/* Content Area */}
+        <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
+          <div className="max-w-7xl mx-auto">
+            
+            {activeTab === 'dashboard' && (
+              <DashboardView
+                parcels={parcels}
+                surveys={surveys}
+                mutations={mutations}
+                registrations={registrations}
+                currentUser={currentUser}
+                onNavigate={handleNavigate}
+                onQuickAction={(action) => console.log('Quick action:', action)}
+              />
+            )}
+
+            {activeTab === 'records' && (
+              <LandRecordsView
+                parcels={parcels}
+                ownerships={ownerships}
+                crops={crops}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+                initialSelectedParcelId={activeParams?.selectedParcelId}
+              />
+            )}
+
+            {activeTab === 'map' && (
+              <InteractiveLandMapView
+                parcels={parcels}
+                ownerships={ownerships}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'surveys' && (
+              <LandSurveyView
+                surveys={surveys}
+                parcels={parcels}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+                initialSelectedParcelId={activeParams?.selectedParcelId}
+              />
+            )}
+
+            {activeTab === 'qr' && (
+              <QRCodeManagementView
+                parcels={parcels}
+                qrCodes={qrCodes}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+                initialSelectedParcelId={activeParams?.selectedParcelId}
+              />
+            )}
+
+            {activeTab === 'ownership' && (
+              <OwnershipRecordsView
+                ownerships={ownerships}
+                parcels={parcels}
+                mutations={mutations}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'verification' && (
+              <VerificationApprovalView
+                mutations={mutations}
+                parcels={parcels}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'registration' && (
+              <PropertyRegistrationView
+                registrations={registrations}
+                parcels={parcels}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'cards' && (
+              <DigitalPropertyCardsView
+                parcels={parcels}
+                ownerships={ownerships}
+                qrCodes={qrCodes}
+                currentUser={currentUser}
+                onNavigate={handleNavigate}
+                initialSelectedParcelId={activeParams?.selectedParcelId}
+              />
+            )}
+
+            {activeTab === 'documents' && (
+              <DocumentManagementView
+                documents={documents}
+                parcels={parcels}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'reports' && (
+              <ReportsAnalyticsView
+                parcels={parcels}
+                surveys={surveys}
+                registrations={registrations}
+                mutations={mutations}
+                currentUser={currentUser}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'users' && (
+              <UserRoleManagementView
+                currentUser={currentUser}
+                onRoleChange={handleRoleChange}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'audit' && (
+              <AuditLogsView
+                auditLogs={auditLogs}
+                notifications={notifications}
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+            {activeTab === 'settings' && (
+              <SystemSettingsView
+                currentUser={currentUser}
+                onRefresh={refreshData}
+                onNavigate={handleNavigate}
+              />
+            )}
+
+          </div>
+        </main>
+
+      </div>
+
+      {/* Notifications Drawer */}
+      <NotificationDrawer
+        isOpen={isNotificationsOpen}
+        onClose={() => setIsNotificationsOpen(false)}
+        notifications={notifications}
+        onMarkRead={(id) => {
+          dataService.markNotificationAsRead(id);
+          refreshData();
+        }}
+        onMarkAllRead={() => {
+          dataService.markAllNotificationsAsRead();
+          refreshData();
+        }}
+        onNavigate={handleNavigate}
+      />
+
+    </div>
+  );
+};
