@@ -158,7 +158,7 @@ export const Sidebar: React.FC<SidebarProps> = ({
         </div>
 
         {/* Footer State & Portal Metadata */}
-        <div className="flex-shrink-0 p-3 bg-slate-950 border-t border-slate-800/80">
+        <div className="flex-shrink-0 p-3 bg-slate-950 border-t border-slate-800/80 sticky bottom-0 z-20">
           <div className="flex items-center gap-2 p-2 rounded-md bg-slate-900 border border-slate-800 text-[11px]">
             <div className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></div>
             <div className="flex-1 text-slate-400">

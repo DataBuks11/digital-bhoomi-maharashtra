@@ -33,7 +33,7 @@ import {
 
 import { supabase, isSupabaseConfigured } from '../lib/supabase';
 
-const STORAGE_KEY_PREFIX = 'digital_bhoomi_v1_';
+const STORAGE_KEY_PREFIX = 'digital_bhoomi_v3_';
 
 function loadFromStorage<T>(key: string, fallback: T): T {
   try {
@@ -53,14 +53,50 @@ function saveToStorage<T>(key: string, value: T): void {
   }
 }
 
+function loadAndMergeParcels(): LandParcel[] {
+  const loaded = loadFromStorage<LandParcel[]>('parcels', INITIAL_LAND_PARCELS);
+  const existingIds = new Set(loaded.map(p => p.id));
+  const missing = INITIAL_LAND_PARCELS.filter(p => !existingIds.has(p.id));
+  if (missing.length > 0) {
+    const merged = [...loaded, ...missing];
+    saveToStorage('parcels', merged);
+    return merged;
+  }
+  return loaded;
+}
+
+function loadAndMergeOwnership(): OwnershipRecord[] {
+  const loaded = loadFromStorage<OwnershipRecord[]>('ownership', INITIAL_OWNERSHIP_RECORDS);
+  const existingIds = new Set(loaded.map(o => o.id));
+  const missing = INITIAL_OWNERSHIP_RECORDS.filter(o => !existingIds.has(o.id));
+  if (missing.length > 0) {
+    const merged = [...loaded, ...missing];
+    saveToStorage('ownership', merged);
+    return merged;
+  }
+  return loaded;
+}
+
+function loadAndMergeQRCodes(): QRCodeRecord[] {
+  const loaded = loadFromStorage<QRCodeRecord[]>('qrCodes', INITIAL_QR_CODES);
+  const existingIds = new Set(loaded.map(q => q.id));
+  const missing = INITIAL_QR_CODES.filter(q => !existingIds.has(q.id));
+  if (missing.length > 0) {
+    const merged = [...loaded, ...missing];
+    saveToStorage('qrCodes', merged);
+    return merged;
+  }
+  return loaded;
+}
+
 class DataService {
-  private parcels: LandParcel[] = loadFromStorage('parcels', INITIAL_LAND_PARCELS);
-  private ownership: OwnershipRecord[] = loadFromStorage('ownership', INITIAL_OWNERSHIP_RECORDS);
+  private parcels: LandParcel[] = loadAndMergeParcels();
+  private ownership: OwnershipRecord[] = loadAndMergeOwnership();
   private crops: CropRecord[] = loadFromStorage('crops', INITIAL_CROPS);
   private surveys: SurveyRequest[] = loadFromStorage('surveys', INITIAL_SURVEY_REQUESTS);
   private mutations: MutationApplication[] = loadFromStorage('mutations', INITIAL_MUTATIONS);
   private registrations: PropertyRegistration[] = loadFromStorage('registrations', INITIAL_REGISTRATIONS);
-  private qrCodes: QRCodeRecord[] = loadFromStorage('qrCodes', INITIAL_QR_CODES);
+  private qrCodes: QRCodeRecord[] = loadAndMergeQRCodes();
   private documents: DocumentRecord[] = loadFromStorage('documents', INITIAL_DOCUMENTS);
   private notifications: NotificationItem[] = loadFromStorage('notifications', INITIAL_NOTIFICATIONS);
   private auditLogs: AuditLog[] = loadFromStorage('auditLogs', INITIAL_AUDIT_LOGS);

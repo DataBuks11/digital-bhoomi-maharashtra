@@ -287,6 +287,32 @@ export const App: React.FC = () => {
 
       </div>
 
+      {/* 4. Rock-Solid Institutional Status Footer - Anchors the entire viewport and eliminates any vertical jumping */}
+      <footer className="flex-shrink-0 h-8 bg-slate-900 border-t border-slate-800 text-slate-400 text-[11px] px-3 md:px-4 flex items-center justify-between z-30 select-none">
+        <div className="flex items-center gap-2 md:gap-3 min-w-0">
+          <div className="flex items-center gap-1.5 flex-shrink-0">
+            <span className="w-2 h-2 rounded-full bg-emerald-400 animate-pulse"></span>
+            <span className="font-semibold text-slate-200">Digital Bhoomi Maharashtra</span>
+          </div>
+          <span className="text-slate-600 hidden sm:inline">•</span>
+          <span className="text-slate-400 hidden sm:inline truncate">NIC Node: Nagpur & Pune</span>
+          <span className="text-slate-600 hidden md:inline">•</span>
+          <span className="text-slate-400 hidden md:inline truncate">Active Cadastre: Nagpur ({parcels.filter(p => p.district === 'Nagpur').length} Zones Mapped)</span>
+        </div>
+
+        <div className="flex items-center gap-2 md:gap-4 text-[10px] flex-shrink-0">
+          <span className="text-amber-400 font-medium hidden lg:inline">
+            Fictional Demonstration Prototype
+          </span>
+          <span className="text-slate-400 hidden md:inline">
+            Session: <strong className="text-slate-200 font-medium">{currentUser.fullName.split(' ')[0]}</strong> ({currentUser.role})
+          </span>
+          <span className="bg-slate-800 text-emerald-400 px-2 py-0.5 rounded border border-slate-700 font-mono font-semibold">
+            v1.2.0-LIVE
+          </span>
+        </div>
+      </footer>
+
       {/* Notifications Drawer */}
       <NotificationDrawer
         isOpen={isNotificationsOpen}
