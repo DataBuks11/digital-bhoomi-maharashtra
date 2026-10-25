@@ -40,6 +40,7 @@ export const App: React.FC = () => {
   const [activeParams, setActiveParams] = useState<any>({});
   const [searchQuery, setSearchQuery] = useState('');
   const [isNotificationsOpen, setIsNotificationsOpen] = useState(false);
+  const [isSidebarOpen, setIsSidebarOpen] = useState(false);
 
   // Central Application Data State
   const [currentUser, setCurrentUser] = useState<UserProfile>(dataService.getCurrentUser());
@@ -80,6 +81,7 @@ export const App: React.FC = () => {
   const handleNavigate = (tab: ActiveTab, params: any = {}) => {
     setActiveTab(tab);
     setActiveParams(params);
+    setIsSidebarOpen(false);
   };
 
   // Search handler: If user types in global search and presses enter or types, navigate to records with query
@@ -95,14 +97,14 @@ export const App: React.FC = () => {
   const pendingSurveysCount = surveys.filter(s => s.status !== 'APPROVED' && s.status !== 'REJECTED').length;
 
   return (
-    <div className="min-h-screen bg-slate-50 flex flex-col antialiased">
+    <div className="h-screen w-screen flex flex-col overflow-hidden bg-slate-50 antialiased font-sans">
       
       {/* 1. Official Demonstration Disclaimer Watermark Banner */}
       {settings.disclaimerWatermark && <WatermarkBanner />}
 
       {/* Maintenance Mode Simulation Banner */}
       {settings.maintenanceMode && (
-        <div className="bg-red-600 text-white text-xs px-4 py-1 text-center font-bold">
+        <div className="flex-shrink-0 bg-red-600 text-white text-xs px-4 py-1 text-center font-bold z-30">
           SYSTEM MAINTENANCE NOTICE: Demonstration system in scheduled simulation maintenance.
         </div>
       )}
@@ -115,10 +117,12 @@ export const App: React.FC = () => {
         unreadNotificationsCount={unreadNotificationsCount}
         onSearch={handleGlobalSearch}
         searchQuery={searchQuery}
+        onToggleSidebar={() => setIsSidebarOpen(prev => !prev)}
+        isSidebarOpen={isSidebarOpen}
       />
 
       {/* 3. Main Workspace: Sidebar + Dynamic Module View */}
-      <div className="flex-1 flex overflow-hidden">
+      <div className="flex-1 flex overflow-hidden min-h-0 relative">
         
         {/* Sidebar */}
         <Sidebar
@@ -126,11 +130,13 @@ export const App: React.FC = () => {
           onTabChange={(tab) => handleNavigate(tab)}
           pendingVerificationsCount={pendingVerificationsCount}
           pendingSurveysCount={pendingSurveysCount}
+          isOpen={isSidebarOpen}
+          onClose={() => setIsSidebarOpen(false)}
         />
 
         {/* Content Area */}
-        <main className="flex-1 overflow-y-auto p-4 md:p-6 lg:p-8">
-          <div className="max-w-7xl mx-auto">
+        <main className="flex-1 overflow-y-auto min-h-0 min-w-0 p-4 md:p-6 lg:p-8 bg-slate-50">
+          <div className="max-w-7xl mx-auto space-y-6">
             
             {activeTab === 'dashboard' && (
               <DashboardView

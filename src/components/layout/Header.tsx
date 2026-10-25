@@ -10,7 +10,9 @@ import {
   CheckCircle2, 
   Sparkles,
   ExternalLink,
-  ChevronDown
+  ChevronDown,
+  Menu,
+  X
 } from 'lucide-react';
 import { UserRole, UserProfile } from '../../types';
 import { isSupabaseConfigured } from '../../lib/supabase';
@@ -22,6 +24,8 @@ interface HeaderProps {
   unreadNotificationsCount: number;
   onSearch: (query: string) => void;
   searchQuery: string;
+  onToggleSidebar?: () => void;
+  isSidebarOpen?: boolean;
 }
 
 export const Header: React.FC<HeaderProps> = ({
@@ -31,6 +35,8 @@ export const Header: React.FC<HeaderProps> = ({
   unreadNotificationsCount,
   onSearch,
   searchQuery,
+  onToggleSidebar,
+  isSidebarOpen = false,
 }) => {
   const [roleMenuOpen, setRoleMenuOpen] = useState(false);
 
@@ -42,12 +48,23 @@ export const Header: React.FC<HeaderProps> = ({
   ];
 
   return (
-    <header className="bg-white border-b border-slate-200 sticky top-0 z-40 shadow-xs">
-      <div className="px-4 lg:px-6 py-2.5 flex items-center justify-between gap-4">
+    <header className="flex-shrink-0 bg-white border-b border-slate-200 z-20 shadow-xs">
+      <div className="px-3 sm:px-4 lg:px-6 py-2.5 flex items-center justify-between gap-2 sm:gap-4">
         
-        {/* Brand & Emblem */}
-        <div className="flex items-center gap-3">
-          <div className="w-10 h-10 rounded-lg bg-emerald-800 text-amber-400 flex items-center justify-center font-bold text-lg shadow-sm border border-emerald-950 flex-shrink-0">
+        {/* Brand & Mobile Hamburger */}
+        <div className="flex items-center gap-2 sm:gap-3">
+          {onToggleSidebar && (
+            <button
+              type="button"
+              onClick={onToggleSidebar}
+              className="lg:hidden p-1.5 rounded-lg text-slate-600 hover:text-slate-900 hover:bg-slate-100 transition-colors"
+              aria-label="Toggle Navigation Sidebar"
+            >
+              {isSidebarOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
+            </button>
+          )}
+
+          <div className="w-9 h-9 sm:w-10 sm:h-10 rounded-lg bg-emerald-800 text-amber-400 flex items-center justify-center font-bold text-base sm:text-lg shadow-sm border border-emerald-950 flex-shrink-0">
             <span className="font-serif">महा</span>
           </div>
           <div>

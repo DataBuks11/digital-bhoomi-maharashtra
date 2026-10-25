@@ -7,7 +7,7 @@ interface WatermarkBannerProps {
 
 export const WatermarkBanner: React.FC<WatermarkBannerProps> = () => {
   return (
-    <div className="bg-amber-500/10 border-b border-amber-500/20 px-4 py-2 text-xs text-amber-900 flex items-center justify-between flex-wrap gap-2 sticky top-0 z-50 backdrop-blur-sm">
+    <div className="flex-shrink-0 bg-amber-50 border-b border-amber-200 px-4 py-1.5 text-xs text-amber-950 flex items-center justify-between flex-wrap gap-2 z-30">
       <div className="flex items-center gap-2">
         <span className="flex h-2 w-2 rounded-full bg-amber-600 animate-pulse"></span>
         <span className="font-semibold uppercase tracking-wider text-amber-800">Demo Prototype:</span>
