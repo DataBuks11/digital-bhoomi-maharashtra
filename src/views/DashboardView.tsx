@@ -90,7 +90,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
               <span className="text-[11px] font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-emerald-700/80 text-emerald-200 border border-emerald-600/40">
                 {currentUser.role.replace('_', ' ')} WORKSPACE
               </span>
-              <span className="text-xs text-emerald-300">| Revenue Division Pune & Maharashtra State</span>
+              <span className="text-xs text-emerald-300">| Revenue Divisions: Pune & Nagpur (Maharashtra State Node)</span>
             </div>
             <h2 className="text-xl md:text-2xl font-bold tracking-tight">
               Namaskar, {currentUser.fullName}

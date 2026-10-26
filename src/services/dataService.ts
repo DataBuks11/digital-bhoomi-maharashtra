@@ -89,6 +89,16 @@ function loadAndMergeQRCodes(): QRCodeRecord[] {
   return loaded;
 }
 
+function loadAndMergeProfiles(): UserProfile[] {
+  const loaded = loadFromStorage<UserProfile[]>('profiles', INITIAL_USER_PROFILES);
+  const updated = INITIAL_USER_PROFILES.map(initial => {
+    const existing = loaded.find(p => p.id === initial.id);
+    return existing ? { ...existing, department: initial.department, district: initial.district } : initial;
+  });
+  saveToStorage('profiles', updated);
+  return updated;
+}
+
 class DataService {
   private parcels: LandParcel[] = loadAndMergeParcels();
   private ownership: OwnershipRecord[] = loadAndMergeOwnership();
@@ -101,7 +111,7 @@ class DataService {
   private notifications: NotificationItem[] = loadFromStorage('notifications', INITIAL_NOTIFICATIONS);
   private auditLogs: AuditLog[] = loadFromStorage('auditLogs', INITIAL_AUDIT_LOGS);
   private settings: SystemSettings = loadFromStorage('settings', INITIAL_SYSTEM_SETTINGS);
-  private profiles: UserProfile[] = loadFromStorage('profiles', INITIAL_USER_PROFILES);
+  private profiles: UserProfile[] = loadAndMergeProfiles();
   private currentUserId: string = loadFromStorage('currentUserId', INITIAL_USER_PROFILES[0].id);
 
   // --- Current User & Roles ---
