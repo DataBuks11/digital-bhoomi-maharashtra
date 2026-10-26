@@ -68,30 +68,39 @@ export const UserRoleManagementView: React.FC<UserRoleManagementViewProps> = ({
         </div>
       </div>
 
-      {/* Quick Role Switcher Banner for Evaluator */}
-      <div className="bg-slate-900 text-white p-4 rounded-xl border border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-3">
+      {/* Administrative Delegation Bar */}
+      <div className="bg-gradient-to-r from-slate-950 via-slate-900 to-emerald-950 text-white p-4 sm:p-5 rounded-xl border border-slate-800 shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-4">
         <div>
-          <div className="text-[11px] font-semibold text-emerald-400 uppercase tracking-wider">
-            Prototype Evaluation Control
+          <div className="text-[10px] font-bold text-amber-400 uppercase tracking-wider flex items-center gap-1.5">
+            <span className="w-1.5 h-1.5 rounded-full bg-amber-400 animate-pulse"></span>
+            प्रशासकीय पदभार व प्रवेश नियंत्रण कक्ष (Administrative Workspace Access)
           </div>
-          <div className="text-sm font-bold mt-0.5">Switch Persona to Experience Role Workflows</div>
-          <p className="text-xs text-slate-400 mt-0.5">
-            Instantly switch the simulated credentials to test surveyor field forms, officer approval queues, or citizen self-service.
+          <div className="text-sm font-bold text-white mt-0.5">
+            कार्यकारी पदभार निवडा (Designate Active Operational Persona)
+          </div>
+          <p className="text-xs text-slate-300 mt-0.5 max-w-xl">
+            संचालक (पुणे व नागपूर), मंडळ अधिकारी (तलाठी), उपअधीक्षक भूमी अभिलेख (मोजणी भूमापक) किंवा नागरिक खातेदार कार्यप्रणाली तपासा.
           </p>
         </div>
 
-        <div className="flex flex-wrap gap-2">
-          {(['ADMIN', 'VERIFICATION_OFFICER', 'SURVEYOR', 'CITIZEN'] as UserRole[]).map((r) => (
+        <div className="flex flex-wrap gap-2 flex-shrink-0">
+          {[
+            { role: 'ADMIN' as UserRole, label: 'राज्य संचालक (Admin)', sub: 'पुणे व नागपूर' },
+            { role: 'VERIFICATION_OFFICER' as UserRole, label: 'तलाठी (Officer)', sub: 'हवेली व बेसा' },
+            { role: 'SURVEYOR' as UserRole, label: 'भूमापक (Surveyor)', sub: 'मोजणी कक्ष' },
+            { role: 'CITIZEN' as UserRole, label: 'खातेदार (Citizen)', sub: 'नागरिक सेवा' },
+          ].map(({ role: r, label, sub }) => (
             <button
               key={r}
               onClick={() => onRoleChange(r)}
-              className={`px-3 py-1.5 rounded-lg text-xs font-semibold transition-all ${
+              className={`px-3 py-1.5 rounded-lg text-xs font-bold transition-all text-left ${
                 currentUser.role === r
-                  ? 'bg-emerald-600 text-white shadow-xs'
-                  : 'bg-slate-800 text-slate-300 hover:bg-slate-700 hover:text-white'
+                  ? 'bg-emerald-600 text-white shadow-xs border border-emerald-500'
+                  : 'bg-slate-800/80 text-slate-300 hover:bg-slate-700 hover:text-white border border-slate-700/60'
               }`}
             >
-              {r.replace(/_/g, ' ')}
+              <div>{label}</div>
+              <div className="text-[9px] opacity-75 font-normal">{sub}</div>
             </button>
           ))}
         </div>
@@ -99,11 +108,14 @@ export const UserRoleManagementView: React.FC<UserRoleManagementViewProps> = ({
 
       {/* User Profiles Directory Table */}
       <div className="bg-white rounded-xl border border-slate-200 shadow-2xs overflow-hidden">
-        <div className="p-4 bg-slate-50/70 border-b border-slate-200 flex items-center justify-between text-xs text-slate-700 font-semibold">
+        <div className="p-4 bg-slate-50/80 border-b border-slate-200 flex items-center justify-between text-xs text-slate-800 font-bold">
           <span className="flex items-center gap-2">
-            <Users className="w-4 h-4 text-emerald-700" /> System Personnel Directory
+            <Users className="w-4 h-4 text-emerald-800" />
+            महसूल व भूमी अभिलेख अधिकारी नामावली (Gazetted Officers & Personnel Register)
           </span>
-          <span className="text-slate-400">{profiles.length} Active System Accounts</span>
+          <span className="text-[11px] text-emerald-800 font-semibold bg-emerald-50 px-2 py-0.5 rounded border border-emerald-200">
+            {profiles.length} अधिकृत खाती (Active)
+          </span>
         </div>
 
         <div className="overflow-x-auto">

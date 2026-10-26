@@ -82,49 +82,52 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
   return (
     <div className="space-y-6">
       
-      {/* Welcome & Role Context Banner */}
-      <div className="bg-gradient-to-r from-emerald-900 via-emerald-800 to-slate-900 text-white rounded-xl p-5 md:p-6 shadow-sm border border-emerald-950 relative overflow-hidden">
-        <div className="relative z-10 flex flex-col md:flex-row md:items-center justify-between gap-4">
-          <div>
-            <div className="flex items-center gap-2 mb-1">
-              <span className="text-[11px] font-semibold tracking-wider uppercase px-2.5 py-0.5 rounded-full bg-emerald-700/80 text-emerald-200 border border-emerald-600/40">
-                {currentUser.role.replace('_', ' ')} WORKSPACE
+      {/* Welcome & State Revenue Command Center Banner */}
+      <div className="bg-gradient-to-r from-slate-950 via-emerald-950 to-slate-900 text-white rounded-xl p-5 md:p-6 shadow-md border border-emerald-800/40 relative overflow-hidden">
+        <div className="relative z-10 flex flex-col lg:flex-row lg:items-center justify-between gap-5">
+          <div className="space-y-1.5">
+            <div className="flex items-center gap-2 flex-wrap">
+              <span className="text-[10px] font-bold tracking-wider uppercase px-2.5 py-0.5 rounded bg-emerald-800 text-amber-300 border border-emerald-600/50">
+                महाराष्ट्र शासन • महसूल विभाग
               </span>
-              <span className="text-xs text-emerald-300">| Revenue Divisions: Pune & Nagpur (Maharashtra State Node)</span>
+              <span className="text-xs text-slate-300 font-medium">
+                राज्य भू-अभिलेख व जमाबंदी नियंत्रण कक्ष | Pune & Nagpur State Node
+              </span>
             </div>
-            <h2 className="text-xl md:text-2xl font-bold tracking-tight">
-              Namaskar, {currentUser.fullName}
+            <h2 className="text-xl md:text-2xl font-black tracking-tight text-white flex items-center gap-2">
+              <span>सस्नेह नमस्कार,</span>
+              <span className="text-amber-300 font-serif">{currentUser.fullName}</span>
             </h2>
-            <p className="text-xs md:text-sm text-emerald-200/80 mt-1 max-w-2xl leading-relaxed">
-              Bhu-Abhilekh Central Dashboard provides real-time cadastral survey tracking, 7/12 extract lifecycle, QR-based authenticity verification, and land mutation governance.
+            <p className="text-xs md:text-sm text-slate-300 max-w-3xl leading-relaxed">
+              डिजिटल भूमी महाराष्ट्र पोर्टल अंतर्गत पुणे व नागपूर विभागातील सातबारा, भू-नकाशा (३D ड्रोन सर्वेक्षण), ई-फेरफार मंजुरी, भू-आधार ULPIN आणि मालमत्ता पत्रक व्यवस्थापन प्रणाली.
             </p>
           </div>
 
-          {/* Quick Action Buttons */}
-          <div className="flex flex-wrap items-center gap-2">
+          {/* Quick Action Statutory Desks */}
+          <div className="flex flex-wrap items-center gap-2 flex-shrink-0">
             <button
               onClick={() => onNavigate('records')}
-              className="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-semibold shadow-xs flex items-center gap-1.5 transition-all"
+              className="px-3.5 py-2 rounded-lg bg-emerald-600 hover:bg-emerald-500 text-white text-xs font-bold shadow-xs flex items-center gap-1.5 transition-all border border-emerald-500"
             >
-              <FileText className="w-4 h-4" /> 7/12 Records
-            </button>
-            <button
-              onClick={() => onNavigate('qr')}
-              className="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5 transition-all border border-white/20"
-            >
-              <QrCode className="w-4 h-4" /> Scan QR
+              <FileText className="w-4 h-4" /> गाव नमुना ७/१२ (7/12)
             </button>
             <button
               onClick={() => onNavigate('map')}
-              className="px-3.5 py-2 rounded-lg bg-white/10 hover:bg-white/20 text-white text-xs font-semibold backdrop-blur-xs flex items-center gap-1.5 transition-all border border-white/20"
+              className="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-cyan-300 text-xs font-bold flex items-center gap-1.5 transition-all border border-slate-700"
             >
-              <MapPin className="w-4 h-4" /> Land Map
+              <MapPin className="w-4 h-4 text-cyan-400" /> भू-नकाशा व ३D
+            </button>
+            <button
+              onClick={() => onNavigate('verification')}
+              className="px-3.5 py-2 rounded-lg bg-slate-800 hover:bg-slate-700 text-amber-300 text-xs font-bold flex items-center gap-1.5 transition-all border border-slate-700"
+            >
+              <CheckSquare className="w-4 h-4 text-amber-400" /> फेरफार कक्ष
             </button>
           </div>
         </div>
 
-        {/* Subtle decorative background circle */}
-        <div className="absolute -right-10 -bottom-10 w-48 h-48 rounded-full bg-emerald-600/20 blur-2xl pointer-events-none"></div>
+        {/* Subtle decorative background watermarks */}
+        <div className="absolute -right-8 -bottom-8 w-44 h-44 rounded-full bg-emerald-500/10 blur-2xl pointer-events-none"></div>
       </div>
 
       {/* Primary KPI Metrics Grid */}
@@ -132,87 +135,87 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         
         <div 
           onClick={() => onNavigate('records')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-300 cursor-pointer transition-all hover:shadow-sm"
+          className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-400 cursor-pointer transition-all hover:shadow-sm group"
         >
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-[11px] font-medium uppercase tracking-wider">Total Parcels</span>
-            <FileText className="w-4 h-4 text-emerald-700" />
+          <div className="flex items-center justify-between text-slate-500 mb-1.5">
+            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">एकूण भूखंड (Parcels)</span>
+            <FileText className="w-4 h-4 text-emerald-700 group-hover:scale-110 transition-transform" />
           </div>
-          <div className="text-2xl font-bold text-slate-900">{totalParcels}</div>
-          <div className="text-[11px] text-emerald-700 font-medium mt-1 flex items-center gap-1">
-            <ShieldCheck className="w-3 h-3" /> {verifiedParcels} Verified 7/12
+          <div className="text-2xl font-extrabold text-slate-900">{totalParcels}</div>
+          <div className="text-[11px] text-emerald-700 font-semibold mt-1 flex items-center gap-1">
+            <ShieldCheck className="w-3 h-3" /> {verifiedParcels} प्रमाणित सातबारा
           </div>
         </div>
 
         <div 
           onClick={() => onNavigate('surveys')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs hover:border-blue-300 cursor-pointer transition-all hover:shadow-sm"
+          className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-blue-400 cursor-pointer transition-all hover:shadow-sm group"
         >
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-[11px] font-medium uppercase tracking-wider">Active Surveys</span>
-            <Compass className="w-4 h-4 text-blue-600" />
+          <div className="flex items-center justify-between text-slate-500 mb-1.5">
+            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">जमीन मोजणी (Surveys)</span>
+            <Compass className="w-4 h-4 text-blue-600 group-hover:scale-110 transition-transform" />
           </div>
-          <div className="text-2xl font-bold text-slate-900">{pendingSurveys}</div>
-          <div className="text-[11px] text-blue-600 font-medium mt-1 flex items-center gap-1">
-            <Clock className="w-3 h-3" /> Mojani in progress
+          <div className="text-2xl font-extrabold text-slate-900">{pendingSurveys}</div>
+          <div className="text-[11px] text-blue-700 font-semibold mt-1 flex items-center gap-1">
+            <Clock className="w-3 h-3" /> मोजणी चालू (Active)
           </div>
         </div>
 
         <div 
           onClick={() => onNavigate('verification')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs hover:border-amber-300 cursor-pointer transition-all hover:shadow-sm"
+          className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-amber-400 cursor-pointer transition-all hover:shadow-sm group"
         >
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-[11px] font-medium uppercase tracking-wider">Ferfar Queue</span>
-            <CheckSquare className="w-4 h-4 text-amber-600" />
+          <div className="flex items-center justify-between text-slate-500 mb-1.5">
+            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">फेरफार नोंद (Mutations)</span>
+            <CheckSquare className="w-4 h-4 text-amber-600 group-hover:scale-110 transition-transform" />
           </div>
-          <div className="text-2xl font-bold text-slate-900">{pendingMutations}</div>
-          <div className="text-[11px] text-amber-700 font-medium mt-1 flex items-center gap-1">
-            <span>Pending Talathi Sign</span>
+          <div className="text-2xl font-extrabold text-slate-900">{pendingMutations}</div>
+          <div className="text-[11px] text-amber-700 font-semibold mt-1 flex items-center gap-1">
+            <span>तलाठी स्वाक्षरी प्रलंबित</span>
           </div>
         </div>
 
         <div 
           onClick={() => onNavigate('map')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs hover:border-purple-300 cursor-pointer transition-all hover:shadow-sm"
+          className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-purple-400 cursor-pointer transition-all hover:shadow-sm group"
         >
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-[11px] font-medium uppercase tracking-wider">Cadastral Area</span>
-            <Layers className="w-4 h-4 text-purple-600" />
+          <div className="flex items-center justify-between text-slate-500 mb-1.5">
+            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">मोजणी क्षेत्र (Cadastre)</span>
+            <Layers className="w-4 h-4 text-purple-600 group-hover:scale-110 transition-transform" />
           </div>
-          <div className="text-2xl font-bold text-slate-900">{totalAreaHectares.toFixed(2)}</div>
-          <div className="text-[11px] text-slate-500 font-medium mt-1">
-            Hectares mapped
+          <div className="text-2xl font-extrabold text-slate-900">{totalAreaHectares.toFixed(2)}</div>
+          <div className="text-[11px] text-purple-700 font-semibold mt-1">
+            हेक्टर क्षेत्र नकाशावर
           </div>
         </div>
 
         <div 
           onClick={() => onNavigate('registration')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-300 cursor-pointer transition-all hover:shadow-sm"
+          className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-emerald-400 cursor-pointer transition-all hover:shadow-sm group"
         >
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-[11px] font-medium uppercase tracking-wider">Stamp Duty</span>
-            <TrendingUp className="w-4 h-4 text-emerald-600" />
+          <div className="flex items-center justify-between text-slate-500 mb-1.5">
+            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">मुद्रांक महसूल (GRAS)</span>
+            <TrendingUp className="w-4 h-4 text-emerald-600 group-hover:scale-110 transition-transform" />
           </div>
-          <div className="text-2xl font-bold text-slate-900 truncate">
+          <div className="text-xl font-extrabold text-slate-900 truncate">
             {formatCurrencyINR(totalRevenue)}
           </div>
-          <div className="text-[11px] text-emerald-700 font-medium mt-1">
-            Demo SRO collection
+          <div className="text-[11px] text-emerald-700 font-semibold mt-1">
+            SRO नोंदणी संकलन
           </div>
         </div>
 
         <div 
           onClick={() => onNavigate('cards')}
-          className="bg-white p-4 rounded-xl border border-slate-200 shadow-2xs hover:border-indigo-300 cursor-pointer transition-all hover:shadow-sm"
+          className="bg-white p-3.5 rounded-xl border border-slate-200 shadow-2xs hover:border-indigo-400 cursor-pointer transition-all hover:shadow-sm group"
         >
-          <div className="flex items-center justify-between text-slate-500 mb-2">
-            <span className="text-[11px] font-medium uppercase tracking-wider">Property Cards</span>
-            <CreditCard className="w-4 h-4 text-indigo-600" />
+          <div className="flex items-center justify-between text-slate-500 mb-1.5">
+            <span className="text-[10px] font-bold text-slate-600 uppercase tracking-wider">मिळकत पत्रक (Cards)</span>
+            <CreditCard className="w-4 h-4 text-indigo-600 group-hover:scale-110 transition-transform" />
           </div>
-          <div className="text-2xl font-bold text-slate-900">{totalParcels}</div>
-          <div className="text-[11px] text-indigo-600 font-medium mt-1 flex items-center gap-1">
-            <span>Malmatta Patrak ready</span>
+          <div className="text-2xl font-extrabold text-slate-900">{totalParcels}</div>
+          <div className="text-[11px] text-indigo-700 font-semibold mt-1 flex items-center gap-1">
+            <span>डिजिटल स्वाक्षरीत तयार</span>
           </div>
         </div>
 
@@ -225,14 +228,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">District-wise Parcel Count</h3>
+              <h3 className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                <span>जिल्हानिहाय भूखंड सांख्यिकी</span>
+                <span className="text-slate-400 font-normal text-xs">(District Cadastre)</span>
+              </h3>
               <p className="text-xs text-slate-500">Distribution across major Maharashtra nodes</p>
             </div>
             <button 
               onClick={() => onNavigate('reports')}
               className="text-xs text-emerald-700 font-medium hover:underline flex items-center gap-0.5"
             >
-              Details <ArrowRight className="w-3 h-3" />
+              तपशील (Details) <ArrowRight className="w-3 h-3" />
             </button>
           </div>
           <div className="h-60 w-full">
@@ -254,14 +260,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
           <div className="flex items-center justify-between mb-4">
             <div>
-              <h3 className="font-bold text-slate-800 text-sm">Land Use & Classification</h3>
-              <p className="text-xs text-slate-500">Bagayat, Jirayat, NA Commercial & Industrial</p>
+              <h3 className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                <span>जमीन वापर व वर्गवारी</span>
+                <span className="text-slate-400 font-normal text-xs">(Land Classification)</span>
+              </h3>
+              <p className="text-xs text-slate-500">बागायत, जिरायत, अकृषक वाणिज्यिक व औद्योगिक</p>
             </div>
             <button 
               onClick={() => onNavigate('records')}
               className="text-xs text-emerald-700 font-medium hover:underline flex items-center gap-0.5"
             >
-              Filter <ArrowRight className="w-3 h-3" />
+              फिल्टर <ArrowRight className="w-3 h-3" />
             </button>
           </div>
           <div className="h-60 w-full flex items-center justify-center">
@@ -293,13 +302,16 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
         <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs flex flex-col justify-between">
           <div>
             <div className="flex items-center justify-between mb-3">
-              <h3 className="font-bold text-slate-800 text-sm">Action Items</h3>
+              <h3 className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+                <span>महसूल कृती डेस्क</span>
+                <span className="text-slate-400 font-normal text-xs">(Officer Action Desk)</span>
+              </h3>
               <span className="text-[11px] px-2 py-0.5 rounded-full bg-amber-100 text-amber-800 font-semibold border border-amber-200">
-                {pendingMutations + pendingSurveys} Pending
+                {pendingMutations + pendingSurveys} प्रलंबित (Pending)
               </span>
             </div>
             <p className="text-xs text-slate-500 mb-4 leading-relaxed">
-              Prioritized requests requiring surveyor field measurement or Talathi sign-off.
+              तलाठी व मंडळ अधिकारी यांच्या स्वाक्षरीसाठी प्रलंबित फेरफार आणि भूमापक मोजणी प्रकरणे.
             </p>
 
             <div className="space-y-3">
@@ -316,7 +328,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     </span>
                   </div>
                   <div className="text-xs text-slate-600 mt-1 truncate">
-                    Applicant: {m.applicantName} ({m.mutationType.replace(/_/g, ' ')})
+                    अर्जदार: {m.applicantName} ({m.mutationType.replace(/_/g, ' ')})
                   </div>
                 </div>
               ))}
@@ -334,7 +346,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
                     </span>
                   </div>
                   <div className="text-xs text-slate-600 mt-1 truncate">
-                    Applicant: {s.applicantName} ({s.surveyType.replace(/_/g, ' ')})
+                    मोजणी अर्ज: {s.applicantName} ({s.surveyType.replace(/_/g, ' ')})
                   </div>
                 </div>
               ))}
@@ -345,7 +357,7 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
             onClick={() => onNavigate('verification')}
             className="w-full mt-4 py-2 bg-slate-900 hover:bg-slate-800 text-white text-xs font-semibold rounded-lg transition-colors flex items-center justify-center gap-1.5"
           >
-            Open Officer Verification Queue <ArrowRight className="w-3.5 h-3.5" />
+            फेरफार मंजुरी डेस्क उघडा (Open Verification Desk) <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
 
@@ -355,14 +367,17 @@ export const DashboardView: React.FC<DashboardViewProps> = ({
       <div className="bg-white p-5 rounded-xl border border-slate-200 shadow-2xs">
         <div className="flex items-center justify-between mb-4">
           <div>
-            <h3 className="font-bold text-slate-800 text-sm">Recent 7/12 Land Parcel Records</h3>
-            <p className="text-xs text-slate-500">Live cadastral abstracts with Bhu-Aadhaar ULPIN reference</p>
+            <h3 className="font-bold text-slate-800 text-sm flex items-center gap-1.5">
+              <span>गाव नमुना ७/१२ नोंदवही (थेट सारांश)</span>
+              <span className="text-slate-400 font-normal text-xs">(Live 7/12 Cadastral Directory)</span>
+            </h3>
+            <p className="text-xs text-slate-500">भू-आधार ULPIN क्रमांकासह प्रमाणित व अद्ययावत भूखंड सूची</p>
           </div>
           <button
             onClick={() => onNavigate('records')}
             className="text-xs text-emerald-700 font-semibold hover:underline flex items-center gap-1"
           >
-            View all {totalParcels} records <ArrowRight className="w-3.5 h-3.5" />
+            सर्व {totalParcels} भूखंड पहा (View All) <ArrowRight className="w-3.5 h-3.5" />
           </button>
         </div>
 
